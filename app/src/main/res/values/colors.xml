@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Design tokens EnCuadre — extraídos de Figma (página Fundamentos) -->
+    <color name="encuadre_fondo">#1A1B26</color>
+    <color name="encuadre_superficie">#242530</color>
+    <color name="encuadre_texto_principal">#FDFBF8</color>
+    <color name="encuadre_texto_secundario">#9CA3AF</color>
+    <color name="encuadre_acento">#E8836B</color>
+    <color name="encuadre_error">#D14343</color>
+    <color name="encuadre_exito">#3FA66C</color>
+</resources>

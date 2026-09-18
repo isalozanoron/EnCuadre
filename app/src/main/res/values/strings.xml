@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EnCuadre</string>
+    <string name="cargando">Cargando…</string>
+
+    <string name="login_subtitulo">Inicia sesión en tu cuenta</string>
+    <string name="label_correo">Correo electrónico</string>
+    <string name="label_contrasena">Contraseña</string>
+    <string name="accion_iniciar_sesion">Iniciar sesión</string>
+    <string name="accion_olvidaste_contrasena">¿Olvidaste tu contraseña?</string>
+    <string name="accion_registrarse">Registrarse</string>
+    <string name="error_campos_vacios">Completa correo y contraseña</string>
+
+    <string name="registro_titulo">Crea tu cuenta</string>
+    <string name="label_nombre">Nombre completo</string>
+    <string name="label_confirmar_contrasena">Confirmar contraseña</string>
+    <string name="accion_crear_cuenta">Crear cuenta</string>
+    <string name="accion_ya_tengo_cuenta">Ya tengo cuenta</string>
+    <string name="error_registro_incompleto">Completa todos los campos</string>
+    <string name="error_contrasenas_no_coinciden">Las contraseñas no coinciden</string>
+
+    <string name="dialogo_recuperar_titulo">Recuperar contraseña</string>
+    <string name="dialogo_recuperar_mensaje">Por ahora, la recuperación de contraseña se hace desde la versión web de EnCuadre. Ingresa a encuadre.com desde tu computador.</string>
+    <string name="dialogo_entendido">Entendido</string>
+
+    <string name="placeholder_titulo">Pantalla en construcción</string>
+    <string name="placeholder_volver">Volver</string>
+</resources>
