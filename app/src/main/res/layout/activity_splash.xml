@@ -6,12 +6,14 @@
     android:layout_height="match_parent"
     android:background="@color/encuadre_fondo">
 
-    <!-- TODO: reemplazar por el logo real exportado desde Figma (actualmente usa el ícono de lanzador) -->
-    <ImageView
+    <!-- Logo con esquinas redondeadas de 16dp (misma marca que Login) -->
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/iv_logo"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:src="@mipmap/ic_launcher_foreground"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo_encuadre"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.EnCuadre.Logo"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

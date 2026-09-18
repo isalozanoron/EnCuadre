@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Design tokens EnCuadre — extraídos de Figma (página Fundamentos) -->
+    <!-- Paleta base EnCuadre — confirmada directo desde las variables de Figma (get_variable_defs) -->
     <color name="encuadre_fondo">#1A1B26</color>
     <color name="encuadre_superficie">#242530</color>
     <color name="encuadre_texto_principal">#FDFBF8</color>
@@ -8,4 +8,21 @@
     <color name="encuadre_acento">#E8836B</color>
     <color name="encuadre_error">#D14343</color>
     <color name="encuadre_exito">#3FA66C</color>
+
+    <!-- Neutros adicionales del sistema de diseño -->
+    <color name="encuadre_blanco">#FFFFFF</color>
+    <color name="encuadre_negro">#000000</color>
+    <color name="encuadre_gris_20">#CCCCCC</color>
+    <color name="encuadre_gris_40">#999999</color>
+    <color name="encuadre_gris_60">#666666</color>
+    <color name="encuadre_gris_80">#333333</color>
+
+    <!-- Variantes con opacidad (formato Android es #AARRGGBB, alpha primero) -->
+    <color name="encuadre_blanco_10">#1AFFFFFF</color>
+    <color name="encuadre_blanco_8">#14FFFFFF</color>
+    <color name="encuadre_negro_10">#1A000000</color>
+    <color name="encuadre_gris_60_10">#1A666666</color>
+    <color name="encuadre_gris_60_8">#14666666</color>
+    <color name="encuadre_gris_20_10">#1ACCCCCC</color>
+    <color name="encuadre_texto_secundario_40">#667D828C</color>
 </resources>
