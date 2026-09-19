@@ -25,4 +25,16 @@
 
     <string name="placeholder_titulo">Pantalla en construcción</string>
     <string name="placeholder_volver">Volver</string>
+
+    <!-- Barra de navegación inferior -->
+    <string name="nav_inicio">Inicio</string>
+    <string name="nav_mis_funciones">Mis Funciones</string>
+    <string name="nav_ajustes">Ajustes</string>
+    <string name="nav_perfil">Perfil</string>
+
+    <!-- Perfil -->
+    <string name="perfil_titulo">Perfil</string>
+    <string name="perfil_generos_favoritos">Géneros favoritos</string>
+    <string name="perfil_ayuda_chips">Toca un género para seleccionarlo o quitarlo.\nLos cambios se guardan automáticamente.</string>
+    <string name="perfil_editar_web">Edita tus demás datos en encuadre.com\ndesde tu computador.</string>
 </resources>

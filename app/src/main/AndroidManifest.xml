@@ -20,9 +20,10 @@
         <activity android:name=".LoginActivity" android:exported="false"/>
         <activity android:name=".RegistroActivity" android:exported="false"/>
         <activity android:name=".PlaceholderActivity" android:exported="false"/>
+        <activity android:name=".PerfilActivity" android:exported="false"/>
 
         <!-- Pantallas de Isabella pendientes de agregar en próximos commits:
-             PerfilActivity, BandejaNotificacionesActivity, MaratonPendienteActivity,
+             Push Banner (componente), BandejaNotificacionesActivity, MaratonPendienteActivity,
              NotificacionesAjustesActivity -->
 
         <!-- Pantallas de Juan (Mobile) — agregar aquí cuando él las suba a la rama:

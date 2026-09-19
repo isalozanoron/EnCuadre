@@ -1,6 +1,8 @@
 package com.encuadre.mobile;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -32,5 +34,12 @@ public class PlaceholderActivity extends AppCompatActivity {
 
         Button btnVolver = findViewById(R.id.btn_volver);
         btnVolver.setOnClickListener(v -> finish());
+
+        // SOLO PARA PRUEBAS — quitar este bloque completo antes del commit final.
+        // Atajo desde el placeholder de "Inicio" para llegar a Perfil sin pelear
+        // con la configuración de "Specified Activity" de Android Studio.
+        View navBar = findViewById(R.id.nav_bar_bottom);
+        navBar.findViewById(R.id.nav_item_perfil).setOnClickListener(v ->
+                startActivity(new Intent(PlaceholderActivity.this, PerfilActivity.class)));
     }
 }

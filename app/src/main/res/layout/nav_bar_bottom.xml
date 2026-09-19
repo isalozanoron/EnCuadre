@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Barra de navegación inferior reutilizable. Se agrega con <include> en
+    cualquier pantalla "hub" (Perfil, Bandeja de notificaciones, y las de
+    Juan: Inicio, Mis Funciones, Ajustes).
+
+    Uso desde código: ver NavBarHelper.java — configurarSeleccion(root, tab)
+    resalta el ítem activo y wireNavegacion(root, activity) conecta los clics.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/nav_bar_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@color/encuadre_superficie"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/nav_item_inicio"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <FrameLayout
+            android:id="@+id/nav_icon_container_inicio"
+            android:layout_width="56dp"
+            android:layout_height="32dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:id="@+id/nav_icon_inicio"
+                android:src="@drawable/ic_nav_home"
+                android:contentDescription="@string/nav_inicio"/>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/nav_inicio"
+            android:textColor="@color/encuadre_texto_secundario"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_item_mis_funciones"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <FrameLayout
+            android:id="@+id/nav_icon_container_mis_funciones"
+            android:layout_width="56dp"
+            android:layout_height="32dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:id="@+id/nav_icon_mis_funciones"
+                android:src="@drawable/ic_nav_mis_funciones"
+                android:contentDescription="@string/nav_mis_funciones"/>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/nav_mis_funciones"
+            android:textColor="@color/encuadre_texto_secundario"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_item_ajustes"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <FrameLayout
+            android:id="@+id/nav_icon_container_ajustes"
+            android:layout_width="56dp"
+            android:layout_height="32dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:id="@+id/nav_icon_ajustes"
+                android:src="@drawable/ic_nav_ajustes"
+                android:contentDescription="@string/nav_ajustes"/>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/nav_ajustes"
+            android:textColor="@color/encuadre_texto_secundario"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/nav_item_perfil"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp">
+
+        <FrameLayout
+            android:id="@+id/nav_icon_container_perfil"
+            android:layout_width="56dp"
+            android:layout_height="32dp">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                android:id="@+id/nav_icon_perfil"
+                android:src="@drawable/ic_nav_perfil"
+                android:contentDescription="@string/nav_perfil"/>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/nav_perfil"
+            android:textColor="@color/encuadre_texto_secundario"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</LinearLayout>

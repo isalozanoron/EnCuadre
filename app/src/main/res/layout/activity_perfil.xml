@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/encuadre_fondo">
+
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="54dp"
+        android:text="@string/perfil_titulo"
+        android:textColor="@color/encuadre_texto_principal"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bg_avatar_placeholder"
+        android:src="@drawable/ic_nav_perfil"
+        android:padding="20dp"
+        app:tint="@color/encuadre_texto_secundario"
+        android:contentDescription="@string/perfil_titulo"
+        app:layout_constraintTop_toBottomOf="@id/tv_titulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Isabella Cano"
+        android:textColor="@color/encuadre_acento"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/iv_avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="isabella@ejemplo.com"
+        android:textColor="@color/encuadre_texto_secundario"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_nombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/encuadre_superficie"
+        app:layout_constraintTop_toBottomOf="@id/tv_correo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_generos_favoritos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/perfil_generos_favoritos"
+        android:textColor="@color/encuadre_acento"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Chips de género en 2 filas fijas (igual que en el mockup), se togglean a mano en Java -->
+    <LinearLayout
+        android:id="@+id/fila_chips_1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/tv_generos_favoritos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/chip_thriller"
+            style="@style/Widget.EnCuadre.Chip"
+            android:layout_marginEnd="8dp"
+            android:text="Thriller"/>
+
+        <TextView
+            android:id="@+id/chip_ciencia_ficcion"
+            style="@style/Widget.EnCuadre.Chip"
+            android:layout_marginEnd="8dp"
+            android:text="Ciencia ficción"/>
+
+        <TextView
+            android:id="@+id/chip_drama"
+            style="@style/Widget.EnCuadre.Chip"
+            android:text="Drama"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/fila_chips_2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/fila_chips_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/chip_comedia"
+            style="@style/Widget.EnCuadre.Chip"
+            android:layout_marginEnd="8dp"
+            android:text="Comedia"/>
+
+        <TextView
+            android:id="@+id/chip_suspenso"
+            style="@style/Widget.EnCuadre.Chip"
+            android:text="Suspenso"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_ayuda_chips"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/perfil_ayuda_chips"
+        android:textColor="@color/encuadre_texto_secundario"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/fila_chips_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_editar_web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:text="@string/perfil_editar_web"
+        android:textColor="@color/encuadre_texto_secundario"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/nav_bar_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <include
+        android:id="@+id/nav_bar_bottom"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        layout="@layout/nav_bar_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

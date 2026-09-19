@@ -51,4 +51,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <!-- SOLO PARA PRUEBAS — quitar antes del commit final.
+         Atajo para llegar a Perfil (y a futuro, otras pantallas reales) sin pelear
+         con la configuración de "Specified Activity" de Android Studio. -->
+    <include
+        android:id="@+id/nav_bar_bottom"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        layout="@layout/nav_bar_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
