@@ -36,6 +36,10 @@ public class PlaceholderActivity extends AppCompatActivity {
         btnVolver.setOnClickListener(v -> finish());
 
         // SOLO PARA PRUEBAS — quitar este bloque completo antes del commit final.
+        findViewById(R.id.btn_ver_notificaciones).setOnClickListener(v ->
+                startActivity(new Intent(PlaceholderActivity.this, BandejaNotificacionesActivity.class)));
+
+        // SOLO PARA PRUEBAS — quitar este bloque completo antes del commit final.
         // Atajo desde el placeholder de "Inicio" para llegar a Perfil y a
         // Notificaciones (dentro de Ajustes) sin pelear con la configuración
         // de "Specified Activity" de Android Studio.

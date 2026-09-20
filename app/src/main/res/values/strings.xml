@@ -44,4 +44,13 @@
     <string name="notificaciones_alarma_salida">Alarma de salida</string>
     <string name="notificaciones_recomendaciones">Recomendaciones de películas</string>
     <string name="notificaciones_estrenos">Estrenos esperados</string>
+
+    <!-- Bandeja de notificaciones -->
+    <string name="bandeja_titulo">Notificaciones</string>
+    <string name="bandeja_recomendacion_titulo">Recomendación para ti</string>
+    <string name="bandeja_recomendacion_subtitulo">Cómo entrenar a tu dragón · Hoy</string>
+    <string name="bandeja_estreno_titulo">Nuevo estreno</string>
+    <string name="bandeja_estreno_subtitulo">Avengers: Doomsday · Hoy</string>
+    <string name="bandeja_maraton_titulo">Maratón pendiente</string>
+    <string name="bandeja_maraton_subtitulo">Continúa tu saga · Ayer</string>
 </resources>
