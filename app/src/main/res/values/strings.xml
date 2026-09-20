@@ -37,4 +37,11 @@
     <string name="perfil_generos_favoritos">Géneros favoritos</string>
     <string name="perfil_ayuda_chips">Toca un género para seleccionarlo o quitarlo.\nLos cambios se guardan automáticamente.</string>
     <string name="perfil_editar_web">Edita tus demás datos en encuadre.com\ndesde tu computador.</string>
+
+    <!-- Notificaciones (Ajustes) -->
+    <string name="notificaciones_titulo">Notificaciones</string>
+    <string name="notificaciones_modo_silencio">Modo silencio automático</string>
+    <string name="notificaciones_alarma_salida">Alarma de salida</string>
+    <string name="notificaciones_recomendaciones">Recomendaciones de películas</string>
+    <string name="notificaciones_estrenos">Estrenos esperados</string>
 </resources>

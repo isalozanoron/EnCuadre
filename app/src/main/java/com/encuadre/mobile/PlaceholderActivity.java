@@ -36,10 +36,13 @@ public class PlaceholderActivity extends AppCompatActivity {
         btnVolver.setOnClickListener(v -> finish());
 
         // SOLO PARA PRUEBAS — quitar este bloque completo antes del commit final.
-        // Atajo desde el placeholder de "Inicio" para llegar a Perfil sin pelear
-        // con la configuración de "Specified Activity" de Android Studio.
+        // Atajo desde el placeholder de "Inicio" para llegar a Perfil y a
+        // Notificaciones (dentro de Ajustes) sin pelear con la configuración
+        // de "Specified Activity" de Android Studio.
         View navBar = findViewById(R.id.nav_bar_bottom);
         navBar.findViewById(R.id.nav_item_perfil).setOnClickListener(v ->
                 startActivity(new Intent(PlaceholderActivity.this, PerfilActivity.class)));
+        navBar.findViewById(R.id.nav_item_ajustes).setOnClickListener(v ->
+                startActivity(new Intent(PlaceholderActivity.this, NotificacionesActivity.class)));
     }
 }

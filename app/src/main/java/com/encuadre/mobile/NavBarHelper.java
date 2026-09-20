@@ -37,7 +37,7 @@ public final class NavBarHelper {
         ImageView icono = navBar.findViewById(idIcono);
         if (seleccionado) {
             contenedor.setBackgroundResource(R.drawable.bg_nav_item_selected);
-            icono.setColorFilter(ContextCompat.getColor(context, R.color.encuadre_texto_principal));
+            icono.setColorFilter(ContextCompat.getColor(context, R.color.encuadre_fondo));
         } else {
             contenedor.setBackground(null);
             icono.setColorFilter(ContextCompat.getColor(context, R.color.encuadre_texto_secundario));

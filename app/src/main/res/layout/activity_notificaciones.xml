@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/encuadre_fondo">
+
+    <ImageButton
+        android:id="@+id/btn_volver"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="22dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:src="@drawable/ic_chevron_back"
+        app:tint="@color/encuadre_texto_principal"
+        android:contentDescription="@string/placeholder_volver"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="54dp"
+        android:text="@string/notificaciones_titulo"
+        android:textColor="@color/encuadre_texto_principal"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Fila 1: Modo silencio automático -->
+    <TextView
+        android:id="@+id/label_modo_silencio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="34dp"
+        android:text="@string/notificaciones_modo_silencio"
+        android:textColor="@color/encuadre_acento"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tv_titulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/switch_modo_silencio"/>
+
+    <FrameLayout
+        android:id="@+id/switch_modo_silencio"
+        android:layout_width="52dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bg_switch_track_on"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="@id/label_modo_silencio"
+        app:layout_constraintBottom_toBottomOf="@id/label_modo_silencio"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <View
+            android:id="@+id/thumb_modo_silencio"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/bg_switch_thumb"/>
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/divider_1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="19dp"
+        android:background="@color/encuadre_superficie"
+        app:layout_constraintTop_toBottomOf="@id/label_modo_silencio"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Fila 2: Alarma de salida -->
+    <TextView
+        android:id="@+id/label_alarma_salida"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/notificaciones_alarma_salida"
+        android:textColor="@color/encuadre_acento"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/divider_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/switch_alarma_salida"/>
+
+    <FrameLayout
+        android:id="@+id/switch_alarma_salida"
+        android:layout_width="52dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bg_switch_track_on"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="@id/label_alarma_salida"
+        app:layout_constraintBottom_toBottomOf="@id/label_alarma_salida"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <View
+            android:id="@+id/thumb_alarma_salida"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/bg_switch_thumb"/>
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/divider_2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="19dp"
+        android:background="@color/encuadre_superficie"
+        app:layout_constraintTop_toBottomOf="@id/label_alarma_salida"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Fila 3: Recomendaciones de películas -->
+    <TextView
+        android:id="@+id/label_recomendaciones"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/notificaciones_recomendaciones"
+        android:textColor="@color/encuadre_acento"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/divider_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/switch_recomendaciones"/>
+
+    <FrameLayout
+        android:id="@+id/switch_recomendaciones"
+        android:layout_width="52dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bg_switch_track_on"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="@id/label_recomendaciones"
+        app:layout_constraintBottom_toBottomOf="@id/label_recomendaciones"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <View
+            android:id="@+id/thumb_recomendaciones"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/bg_switch_thumb"/>
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/divider_3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="19dp"
+        android:background="@color/encuadre_superficie"
+        app:layout_constraintTop_toBottomOf="@id/label_recomendaciones"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Fila 4: Estrenos esperados -->
+    <TextView
+        android:id="@+id/label_estrenos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/notificaciones_estrenos"
+        android:textColor="@color/encuadre_acento"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/divider_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/switch_estrenos"/>
+
+    <FrameLayout
+        android:id="@+id/switch_estrenos"
+        android:layout_width="52dp"
+        android:layout_height="32dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bg_switch_track_on"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="@id/label_estrenos"
+        app:layout_constraintBottom_toBottomOf="@id/label_estrenos"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <View
+            android:id="@+id/thumb_estrenos"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/bg_switch_thumb"/>
+
+    </FrameLayout>
+
+    <include
+        android:id="@+id/nav_bar_bottom"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        layout="@layout/nav_bar_bottom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
