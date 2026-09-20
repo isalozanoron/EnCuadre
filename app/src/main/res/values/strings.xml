@@ -53,4 +53,14 @@
     <string name="bandeja_estreno_subtitulo">Avengers: Doomsday · Hoy</string>
     <string name="bandeja_maraton_titulo">Maratón pendiente</string>
     <string name="bandeja_maraton_subtitulo">Continúa tu saga · Ayer</string>
+
+    <!-- Maratón pendiente -->
+    <string name="maraton_titulo">Maratón pendiente</string>
+    <string name="maraton_subtitulo">Continúa tu maratón</string>
+    <string name="maraton_saga">Saga · Cómo entrenar a tu dragón</string>
+    <string name="maraton_descripcion">Ya viste la primera película. Continúa con la segunda y la tercera entrega cuando tengas tiempo. Guarda el recordatorio para volver a encontrarlas aquí.</string>
+    <string name="maraton_me_interesa">★ Me interesa</string>
+    <string name="maraton_no_me_interesa">No me interesa</string>
+    <string name="maraton_guardado">Maratón guardado</string>
+    <string name="maraton_descartado">Descartado</string>
 </resources>

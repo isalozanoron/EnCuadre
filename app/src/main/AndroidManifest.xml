@@ -23,9 +23,10 @@
         <activity android:name=".PerfilActivity" android:exported="false"/>
         <activity android:name=".NotificacionesActivity" android:exported="false"/>
         <activity android:name=".BandejaNotificacionesActivity" android:exported="false"/>
+        <activity android:name=".MaratonPendienteActivity" android:exported="false"/>
 
         <!-- Pantallas de Isabella pendientes de agregar en próximos commits:
-             Push Banner (componente), MaratonPendienteActivity -->
+             Push Banner (componente) -->
 
         <!-- Pantallas de Juan (Mobile) — agregar aquí cuando él las suba a la rama:
              HomeActivity (Inicio), RecomendacionActivity, EstrenoActivity, HorariosActivity,
