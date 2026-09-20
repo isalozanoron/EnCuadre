@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.encuadre.mobile">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -25,8 +27,9 @@
         <activity android:name=".BandejaNotificacionesActivity" android:exported="false"/>
         <activity android:name=".MaratonPendienteActivity" android:exported="false"/>
 
-        <!-- Pantallas de Isabella pendientes de agregar en próximos commits:
-             Push Banner (componente) -->
+        <!-- Push Banner: implementado como notificación real del sistema
+             (PushNotificationHelper.java), disparado automáticamente desde
+             SplashActivity — no es una Activity aparte -->
 
         <!-- Pantallas de Juan (Mobile) — agregar aquí cuando él las suba a la rama:
              HomeActivity (Inicio), RecomendacionActivity, EstrenoActivity, HorariosActivity,

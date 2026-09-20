@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/encuadre_fondo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Menú de pruebas"
+            android:textColor="@color/encuadre_texto_principal"
+            android:textSize="21sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp"
+            android:text="Esta pantalla NO es parte del mockup. Es solo para verificar el código sin pelear con la configuración de Android Studio. Se elimina antes de la entrega final."
+            android:textColor="@color/encuadre_texto_secundario"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ir directo a una pantalla"
+            android:textColor="@color/encuadre_acento"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btn_ir_perfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_button_outline"
+            android:padding="12dp"
+            android:text="Perfil"
+            android:textAllCaps="false"
+            android:textColor="@color/encuadre_acento"/>
+
+        <Button
+            android:id="@+id/btn_ir_notificaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_button_outline"
+            android:padding="12dp"
+            android:text="Notificaciones (Ajustes)"
+            android:textAllCaps="false"
+            android:textColor="@color/encuadre_acento"/>
+
+        <Button
+            android:id="@+id/btn_ir_bandeja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_button_outline"
+            android:padding="12dp"
+            android:text="Bandeja de notificaciones"
+            android:textAllCaps="false"
+            android:textColor="@color/encuadre_acento"/>
+
+        <Button
+            android:id="@+id/btn_ir_maraton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_button_outline"
+            android:padding="12dp"
+            android:text="Maratón pendiente"
+            android:textAllCaps="false"
+            android:textColor="@color/encuadre_acento"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Disparar Push Banner (notificación real)"
+            android:textColor="@color/encuadre_acento"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btn_push_salir"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_button_outline"
+            android:padding="12dp"
+            android:text="Hora de salir"
+            android:textAllCaps="false"
+            android:textColor="@color/encuadre_acento"/>
+
+        <Button
+            android:id="@+id/btn_push_recomendacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_button_outline"
+            android:padding="12dp"
+            android:text="Recomendación"
+            android:textAllCaps="false"
+            android:textColor="@color/encuadre_acento"/>
+
+        <Button
+            android:id="@+id/btn_push_estreno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_button_outline"
+            android:padding="12dp"
+            android:text="Estreno"
+            android:textAllCaps="false"
+            android:textColor="@color/encuadre_acento"/>
+
+        <Button
+            android:id="@+id/btn_push_maraton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/bg_button_outline"
+            android:padding="12dp"
+            android:text="Maratón"
+            android:textAllCaps="false"
+            android:textColor="@color/encuadre_acento"/>
+
+    </LinearLayout>
+
+</ScrollView>

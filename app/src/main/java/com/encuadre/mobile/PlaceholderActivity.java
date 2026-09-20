@@ -18,6 +18,9 @@ import androidx.appcompat.app.AppCompatActivity;
  * startActivity(intent);
  * <p>
  * Cuando la pantalla real exista, reemplazar el destino del Intent por su Activity real.
+ * <p>
+ * Nota: los botones de prueba (ver Bandeja, disparar Push Banner) se movieron a
+ * MenuPruebasActivity para no llenar esta pantalla de cosas que no son del mockup real.
  */
 public class PlaceholderActivity extends AppCompatActivity {
 
@@ -35,8 +38,8 @@ public class PlaceholderActivity extends AppCompatActivity {
         Button btnVolver = findViewById(R.id.btn_volver);
         btnVolver.setOnClickListener(v -> finish());
 
-        // SOLO PARA PRUEBAS — quitar este bloque completo antes del commit final.
-        findViewById(R.id.btn_ver_notificaciones).setOnClickListener(v ->
+        // Campana de notificaciones: replica el ícono real de Inicio (de Juan) en Figma.
+        findViewById(R.id.btn_notificaciones).setOnClickListener(v ->
                 startActivity(new Intent(PlaceholderActivity.this, BandejaNotificacionesActivity.class)));
 
         // SOLO PARA PRUEBAS — quitar este bloque completo antes del commit final.

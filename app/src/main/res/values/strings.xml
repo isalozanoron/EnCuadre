@@ -63,4 +63,15 @@
     <string name="maraton_no_me_interesa">No me interesa</string>
     <string name="maraton_guardado">Maratón guardado</string>
     <string name="maraton_descartado">Descartado</string>
+
+    <!-- Push Banner (notificaciones del sistema) — texto confirmado con Figma -->
+    <string name="push_canal_nombre">Notificaciones de EnCuadre</string>
+    <string name="push_hora_salir_titulo">Hora de salir</string>
+    <string name="push_hora_salir_texto">Sal ahora para llegar a tiempo a The Odyssey</string>
+    <string name="push_recomendacion_titulo">Tenemos una recomendación para ti</string>
+    <string name="push_recomendacion_texto">Basada en tu historial: Como Entrenar a tu Dragon</string>
+    <string name="push_estreno_titulo">Ya hay boletas disponibles</string>
+    <string name="push_estreno_texto">Avengers: Doomsday ya está disponible</string>
+    <string name="push_maraton_titulo">Tu maratón te espera</string>
+    <string name="push_maraton_texto">Continúa la saga de Cómo entrenar a tu dragón</string>
 </resources>
