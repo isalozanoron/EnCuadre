@@ -1,0 +1,46 @@
+<div class="pantalla">
+  <app-sidebar activo="precios"></app-sidebar>
+
+  <div class="contenido">
+    <div class="encabezado">
+      <h1 class="encabezado__titulo">Compara precios y horarios</h1>
+      <a mat-stroked-button class="btn-outline btn--ancho-header" routerLink="/mi-perfil">Mi perfil</a>
+    </div>
+
+    <p class="subtitulo">Robot salvaje · Bogotá · Sábado 12 de septiembre de 2026</p>
+
+    <div class="contenido-principal">
+
+      <a class="enlace-volver" routerLink="/buscar-funciones">‹&nbsp;&nbsp;Cambiar búsqueda</a>
+
+      <div class="tabla">
+        <div class="tabla__encabezado">
+          <p class="col col--cine">CINE</p>
+          <p class="col col--horarios">HORARIOS</p>
+          <p class="col col--precio">PRECIO POR BOLETA</p>
+          <p class="col col--seleccion">SELECCIÓN</p>
+        </div>
+
+        @for (cine of cines; track cine.nombre) {
+          <div class="tabla__fila">
+            <div class="col col--cine">
+              <p class="fila__nombre">{{ cine.nombre }}</p>
+              <p class="fila__ubicacion">{{ cine.ubicacion }}</p>
+            </div>
+            <p class="col col--horarios fila__horarios">{{ cine.horarios }}</p>
+            <p class="col col--precio fila__precio">{{ cine.precio }}</p>
+            <div class="col col--seleccion">
+              <a mat-flat-button class="btn-primary btn--ancho-seleccion" (click)="elegirFuncion()">Elegir {{ cine.horarioElegido }}</a>
+            </div>
+          </div>
+        }
+      </div>
+
+      <div class="mensaje-info">
+        <p class="mensaje-info__titulo">Elige la función que mejor se ajuste a ti</p>
+        <p class="mensaje-info__texto">Revisa el total, incluido el cargo de servicio, antes de confirmar tu compra.</p>
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -30,9 +30,9 @@ html, body {
   overflow: hidden;
   color: var(--encuadre-acento) !important;
   background: transparent !important;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
   height: 48px;
   padding: 0 24px !important;
 }
@@ -44,9 +44,9 @@ html, body {
   overflow: hidden;
   background-color: var(--encuadre-acento) !important;
   color: var(--encuadre-fondo) !important;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
   height: 48px;
   padding: 0 24px !important;
 }

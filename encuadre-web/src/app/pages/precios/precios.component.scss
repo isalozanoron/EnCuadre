@@ -1,0 +1,154 @@
+.pantalla {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--encuadre-fondo);
+}
+
+.contenido {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1200px;
+}
+
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+
+  &__titulo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+}
+
+.subtitulo {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--encuadre-texto-secundario);
+  margin: 0;
+}
+
+.contenido-principal {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.enlace-volver {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--encuadre-acento);
+  text-decoration: none;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.tabla {
+  background-color: var(--encuadre-superficie);
+  border: 1px solid var(--encuadre-texto-secundario);
+  border-radius: 12px;
+  overflow: hidden;
+
+  &__encabezado {
+    display: flex;
+    gap: 24px;
+    padding: 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--encuadre-texto-secundario);
+    flex-wrap: wrap;
+  }
+
+  &__fila {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    padding: 24px;
+    flex-wrap: wrap;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--encuadre-fondo);
+    }
+  }
+}
+
+.col {
+  &--cine { flex: 1 1 240px; }
+  &--horarios { flex: 1 1 260px; }
+  &--precio { flex: 1 1 160px; }
+  &--seleccion { flex: 0 0 auto; margin-left: auto; }
+}
+
+.btn--ancho-seleccion {
+  width: 192px;
+}
+
+.fila {
+  &__nombre {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--encuadre-texto-principal);
+    margin: 0 0 8px 0;
+  }
+
+  &__ubicacion {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--encuadre-texto-secundario);
+    margin: 0;
+  }
+
+  &__horarios {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+
+  &__precio {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--encuadre-acento);
+    margin: 0;
+  }
+}
+
+.mensaje-info {
+  background-color: var(--encuadre-superficie);
+  border: 1px solid var(--encuadre-acento);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__titulo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+
+  &__texto {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--encuadre-texto-secundario);
+    margin: 0;
+  }
+}
