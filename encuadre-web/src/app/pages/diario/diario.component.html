@@ -1,0 +1,41 @@
+<div class="pantalla">
+  <app-sidebar activo="diario"></app-sidebar>
+
+  <div class="contenido">
+    <div class="encabezado">
+      <h1 class="encabezado__titulo">Mi diario</h1>
+      <a mat-stroked-button class="btn-outline btn--ancho-header" routerLink="/mi-perfil">Mi perfil</a>
+    </div>
+
+    <p class="subtitulo">Las historias que viste. Los recuerdos que guardaste.</p>
+
+    <div class="contenido-principal">
+
+      <div class="resumen">
+        <p class="resumen__total">24 películas vistas</p>
+        <p class="resumen__orden">Más recientes primero</p>
+      </div>
+
+      <div class="peliculas">
+        @for (entrada of entradas; track entrada.titulo) {
+          <div class="tarjeta-entrada">
+            <!-- Placeholder genérico: no se reproduce el póster real por derechos de autor -->
+            <div class="imagen-placeholder"></div>
+            <p class="tarjeta-entrada__titulo">{{ entrada.titulo }}</p>
+            <p class="tarjeta-entrada__fecha">{{ entrada.fecha }}</p>
+            <p class="tarjeta-entrada__estrellas">{{ entrada.estrellas }}</p>
+            @if (entrada.mostrarBoton) {
+              <a mat-stroked-button class="btn-outline btn--ancho-completo" routerLink="/detalle-entrada">Ver entrada</a>
+            }
+          </div>
+        }
+      </div>
+
+      <div class="mensaje-info">
+        <p class="mensaje-info__titulo">Tu historial también conecta con la app</p>
+        <p class="mensaje-info__texto">Las películas de tu diario ayudan a sugerir maratones pendientes en tu celular.</p>
+      </div>
+
+    </div>
+  </div>
+</div>
