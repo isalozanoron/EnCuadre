@@ -113,6 +113,8 @@
   aspect-ratio: 238 / 300;
   background-color: var(--encuadre-fondo);
   border-radius: 8px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .btn--ancho-completo {

@@ -19,8 +19,7 @@
       <div class="peliculas">
         @for (entrada of entradas; track entrada.titulo) {
           <div class="tarjeta-entrada">
-            <!-- Placeholder genérico: no se reproduce el póster real por derechos de autor -->
-            <div class="imagen-placeholder"></div>
+            <img [src]="entrada.imagen" [alt]="entrada.titulo" class="imagen-placeholder">
             <p class="tarjeta-entrada__titulo">{{ entrada.titulo }}</p>
             <p class="tarjeta-entrada__fecha">{{ entrada.fecha }}</p>
             <p class="tarjeta-entrada__estrellas">{{ entrada.estrellas }}</p>

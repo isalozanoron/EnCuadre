@@ -64,6 +64,8 @@
   background-color: var(--encuadre-superficie);
   border-radius: 8px;
   flex-shrink: 0;
+  object-fit: cover;
+  object-position: center;
 }
 
 .informacion {
