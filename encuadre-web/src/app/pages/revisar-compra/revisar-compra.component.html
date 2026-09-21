@@ -1,0 +1,58 @@
+<div class="pantalla">
+  <app-sidebar activo="precios"></app-sidebar>
+
+  <div class="contenido">
+    <div class="encabezado">
+      <h1 class="encabezado__titulo">Revisa tu compra</h1>
+      <a mat-stroked-button class="btn-outline btn--ancho-header" routerLink="/mi-perfil">Mi perfil</a>
+    </div>
+
+    <p class="subtitulo">1. Elegir función&nbsp;&nbsp;/&nbsp;&nbsp;2. Revisar compra&nbsp;&nbsp;/&nbsp;&nbsp;3. Confirmación</p>
+
+    <div class="contenido-principal">
+
+      <a class="enlace-volver" routerLink="/precios-y-horarios">‹&nbsp;&nbsp;Volver a precios y horarios</a>
+
+      <div class="resumen-pago">
+
+        <div class="tarjeta">
+          <p class="tarjeta__titulo">Tu función</p>
+          <!-- Placeholder genérico: no se reproduce el póster real por derechos de autor -->
+          <div class="imagen-placeholder"></div>
+          <p class="pelicula-nombre">Robot salvaje</p>
+          <div class="detalle-funcion">
+            <p>Cine Colombia · Bogotá</p>
+            <p>Sábado 12 de septiembre de 2026 · 20:30</p>
+            <p>Sala 3 · Asiento F8 · 1 boleta</p>
+          </div>
+          <div class="detalle-precio">
+            <p>Boleta: $ 24.000 COP</p>
+            <p>Cargo de servicio: $ 2.000 COP</p>
+          </div>
+          <p class="total">Total: $ 26.000 COP</p>
+        </div>
+
+        <div class="tarjeta">
+          <p class="tarjeta__titulo">Datos de compra</p>
+
+          <div class="campo">
+            <label class="campo__etiqueta">Correo para recibir tu boleta</label>
+            <input class="campo__input" [(ngModel)]="correo">
+          </div>
+
+          <div class="campo">
+            <label class="campo__etiqueta">Medio de pago</label>
+            <input class="campo__input" [(ngModel)]="medioPago">
+          </div>
+
+          <p class="texto-ayuda">Al confirmar, recibirás tu boleta y la función se sincronizará con tu aplicación móvil.</p>
+
+          <a mat-flat-button class="btn-primary btn--ancho-completo" (click)="pagar()">Pagar $ 26.000 COP</a>
+          <a mat-stroked-button class="btn-outline btn--ancho-completo" routerLink="/precios-y-horarios">Cancelar</a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>

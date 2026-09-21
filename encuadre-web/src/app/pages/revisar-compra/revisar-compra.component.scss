@@ -1,0 +1,166 @@
+.pantalla {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--encuadre-fondo);
+}
+
+.contenido {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1200px;
+}
+
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+
+  &__titulo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+}
+
+.subtitulo {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--encuadre-texto-secundario);
+  margin: 0;
+}
+
+.contenido-principal {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.enlace-volver {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--encuadre-acento);
+  text-decoration: none;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.resumen-pago {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  background-color: var(--encuadre-superficie);
+  border: 1px solid var(--encuadre-texto-secundario);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1 1 460px;
+
+  &__titulo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+}
+
+.imagen-placeholder {
+  width: 100%;
+  height: 160px;
+  background-color: var(--encuadre-fondo);
+  border-radius: 8px;
+}
+
+.pelicula-nombre {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+  color: var(--encuadre-texto-principal);
+  margin: 0;
+}
+
+.detalle-funcion p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--encuadre-texto-principal);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.detalle-precio p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--encuadre-texto-secundario);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.total {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+  color: var(--encuadre-acento);
+  margin: 0;
+}
+
+.texto-ayuda {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--encuadre-texto-secundario);
+  margin: 0;
+}
+
+.btn--ancho-completo {
+  width: 100%;
+}
+
+/* Campo de texto propio (no mat-form-field): control total del tamaño
+   y color, mismo criterio que el switch hecho a mano en Mobile. */
+.campo {
+  position: relative;
+  border: 1px solid var(--encuadre-texto-secundario);
+  border-radius: 4px;
+  height: 56px;
+  padding: 0 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  &__etiqueta {
+    position: absolute;
+    top: -8px;
+    left: 12px;
+    background-color: var(--encuadre-superficie);
+    padding: 0 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--encuadre-texto-secundario);
+  }
+
+  &__input {
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--encuadre-texto-principal);
+  }
+}
