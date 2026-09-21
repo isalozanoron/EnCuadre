@@ -1,0 +1,21 @@
+<div class="dialogo">
+  <h2 class="dialogo__titulo">Calificar película</h2>
+  <p class="dialogo__subtitulo">¿Qué te pareció {{ data.pelicula }}?</p>
+
+  <div class="estrellas">
+    @for (numero of estrellas; track numero) {
+      <button
+        type="button"
+        class="estrellas__boton"
+        (click)="elegir(numero)"
+        [attr.aria-label]="numero + ' de 5'">
+        {{ numero <= calificacionSeleccionada ? '★' : '☆' }}
+      </button>
+    }
+  </div>
+
+  <p class="dialogo__resultado">{{ calificacionSeleccionada }} de 5</p>
+
+  <a mat-flat-button class="btn-primary btn--ancho-completo" (click)="guardar()">Guardar calificación</a>
+  <a mat-stroked-button class="btn-outline btn--ancho-completo" (click)="cancelar()">Cancelar</a>
+</div>

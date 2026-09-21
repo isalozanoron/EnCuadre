@@ -1,0 +1,51 @@
+.dialogo {
+  background-color: var(--encuadre-fondo);
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 456px;
+
+  &__titulo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+
+  &__subtitulo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--encuadre-texto-secundario);
+    margin: 0;
+  }
+
+  &__resultado {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+}
+
+.estrellas {
+  display: flex;
+  gap: 12px;
+
+  &__boton {
+    background: none;
+    border: none;
+    font-size: 32px;
+    color: var(--encuadre-acento);
+    cursor: pointer;
+    padding: 8px;
+    line-height: 1;
+  }
+}
+
+.btn--ancho-completo {
+  width: 100%;
+}

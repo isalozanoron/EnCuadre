@@ -1,0 +1,220 @@
+.pantalla {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--encuadre-fondo);
+}
+
+.contenido {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1200px;
+}
+
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+
+  &__titulo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+}
+
+.subtitulo {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--encuadre-texto-secundario);
+  margin: 0;
+}
+
+.contenido-principal {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.enlace-volver {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--encuadre-acento);
+  text-decoration: none;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.ficha {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.imagen-placeholder {
+  width: 280px;
+  height: 420px;
+  background-color: var(--encuadre-superficie);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.informacion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1 1 480px;
+
+  &__titulo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+
+  &__meta {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--encuadre-texto-secundario);
+    margin: 0;
+  }
+}
+
+.calificacion-fila {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+
+  &__estrellas {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--encuadre-acento);
+    margin: 0;
+  }
+}
+
+.tarjeta {
+  background-color: var(--encuadre-superficie);
+  border: 1px solid var(--encuadre-texto-secundario);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__titulo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+
+  &__texto {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--encuadre-texto-secundario);
+    margin: 0;
+  }
+
+  &--boleta {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}
+
+.boleta-datos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__encabezado {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--encuadre-acento);
+    margin: 0;
+  }
+
+  &__pelicula {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+
+  &__fecha {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--encuadre-texto-secundario);
+    margin: 0;
+  }
+}
+
+.boleta-asiento {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: right;
+
+  &__sala {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--encuadre-texto-secundario);
+    margin: 0;
+  }
+
+  &__numero {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--encuadre-acento);
+    margin: 0;
+  }
+}
+
+.mensaje-info {
+  background-color: var(--encuadre-superficie);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &--exito {
+    border: 1px solid var(--encuadre-exito);
+  }
+
+  &__titulo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+
+  &__texto {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--encuadre-texto-secundario);
+    margin: 0;
+  }
+}
