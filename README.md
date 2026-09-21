@@ -54,6 +54,4 @@ encuadre-web/
 Inicio, Mi perfil, Mi diario, Detalle de entrada, Comparar precios y horarios, Revisar compra, Función confirmada.
 
 ## Notas
-
-- Las imágenes de películas (pósters) se reemplazaron por bloques de color genéricos en vez de reproducir arte con derechos de autor.
 - Varios componentes de Angular Material (botones, `mat-list-item`, campos de texto) requirieron sobrescribir sus estilos con `!important` o reemplazarlos por elementos propios, ya que no respetaban bien los colores/formas exactos del diseño por defecto.
