@@ -1,0 +1,62 @@
+<div class="pantalla">
+  <app-sidebar activo="inicio"></app-sidebar>
+
+  <div class="contenido">
+    <div class="encabezado">
+      <h1 class="encabezado__titulo">Hola, Isabella</h1>
+      <a mat-stroked-button class="btn-outline" routerLink="/mi-perfil">Mi perfil</a>
+    </div>
+
+    <p class="subtitulo">Una buena historia empieza con tu próxima película.</p>
+
+    <div class="contenido-principal">
+
+      <!-- Actividad reciente: 2 tarjetas lado a lado -->
+      <div class="actividad-reciente">
+
+        <div class="tarjeta tarjeta--ultima-pelicula">
+          <p class="tarjeta__titulo">Tu última película</p>
+          <p class="tarjeta__subtitulo">Vista el 2 de septiembre de 2026</p>
+          <div class="pelicula-info">
+            <!-- Placeholder genérico: no se reproduce el póster real por derechos de autor -->
+            <div class="imagen-placeholder imagen-placeholder--vertical"></div>
+            <div class="pelicula-info__detalle">
+              <p class="pelicula-info__nombre">Interstellar</p>
+              <p class="pelicula-info__genero">Ciencia ficción · Drama</p>
+              <p class="pelicula-info__calificacion">★★★★☆&nbsp;&nbsp;4 de 5</p>
+              <a mat-flat-button class="btn-primary btn--ancho-fijo" routerLink="/mi-diario">Ver en mi diario</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="tarjeta tarjeta--proxima-funcion">
+          <p class="tarjeta__titulo">Tu próxima función</p>
+          <div class="imagen-placeholder imagen-placeholder--horizontal"></div>
+          <div class="horario">
+            <p class="horario__pelicula">Robot salvaje</p>
+            <p class="horario__hora">20:30</p>
+          </div>
+          <p class="tarjeta__subtitulo">Cine Colombia · Bogotá · Sáb. 12 sep.</p>
+          <a mat-flat-button class="btn-primary btn--ancho-completo" routerLink="/precios-y-horarios">Ver función</a>
+        </div>
+
+      </div>
+
+      <!-- Mensaje de puente con la app móvil -->
+      <div class="mensaje-info">
+        <p class="mensaje-info__titulo">Tu cine continúa en el celular</p>
+        <p class="mensaje-info__texto">Configura tu alarma de salida y el modo silencio desde la aplicación EnCuadre.</p>
+      </div>
+
+      <p class="pregunta">¿Qué quieres hacer hoy?</p>
+
+      <div class="accesos-rapidos">
+        <a mat-stroked-button class="btn-outline" routerLink="/donde-verla">Buscar una película</a>
+        <a mat-stroked-button class="btn-outline" routerLink="/precios-y-horarios">Comparar funciones</a>
+        <a mat-stroked-button class="btn-outline" routerLink="/mi-diario">Explorar mi diario</a>
+        <a mat-stroked-button class="btn-outline" routerLink="/mi-perfil">Editar mi perfil</a>
+      </div>
+
+    </div>
+  </div>
+</div>

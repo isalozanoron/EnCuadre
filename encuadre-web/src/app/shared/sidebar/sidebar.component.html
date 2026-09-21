@@ -1,0 +1,31 @@
+<nav class="sidebar">
+  <div class="sidebar__superior">
+    <div class="marca">
+      <img src="/logo_encuadre.png" alt="EnCuadre" class="marca__logo">
+      <p class="marca__texto">EnCuadre</p>
+    </div>
+
+    <p class="eslogan">TU HISTORIA DE CINE</p>
+
+    <mat-nav-list class="destinos">
+      @for (destino of destinos; track destino.id) {
+        <a
+          mat-list-item
+          [routerLink]="destino.ruta"
+          class="destino"
+          [class.destino--activo]="activo === destino.id">
+          {{ destino.etiqueta }}
+        </a>
+      }
+    </mat-nav-list>
+  </div>
+
+  <div class="cuenta">
+    <div class="cuenta__avatar">
+      <mat-icon>person</mat-icon>
+    </div>
+    <p class="cuenta__nombre">Isabella Cano</p>
+    <p class="cuenta__tipo">Cuenta personal</p>
+    <a class="cuenta__cerrar-sesion">Cerrar sesión</a>
+  </div>
+</nav>

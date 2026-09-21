@@ -1,0 +1,114 @@
+.sidebar {
+  width: 240px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  background-color: var(--encuadre-superficie);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.sidebar__superior {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &__logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  &__texto {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+}
+
+.eslogan {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--encuadre-texto-secundario);
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.destinos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 !important;
+  --mat-list-active-indicator-shape: 8px;
+  --mdc-list-list-item-container-shape: 8px;
+
+  .destino {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--encuadre-texto-secundario);
+    border-radius: 8px !important;
+    overflow: hidden;
+    height: 48px !important;
+
+    &--activo {
+      background-color: var(--encuadre-acento) !important;
+      color: var(--encuadre-fondo) !important;
+    }
+  }
+}
+
+.cuenta {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--encuadre-fondo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--encuadre-texto-secundario);
+  }
+
+  &__nombre {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+
+  &__tipo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--encuadre-texto-secundario);
+    margin: 0;
+  }
+
+  &__cerrar-sesion {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--encuadre-acento);
+    cursor: pointer;
+    text-decoration: none;
+  }
+}

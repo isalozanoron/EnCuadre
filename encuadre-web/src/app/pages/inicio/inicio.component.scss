@@ -1,0 +1,202 @@
+.pantalla {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--encuadre-fondo);
+}
+
+.contenido {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1200px;
+}
+
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+
+  &__titulo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+}
+
+.subtitulo {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--encuadre-texto-secundario);
+  margin: 0;
+}
+
+.contenido-principal {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.actividad-reciente {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.tarjeta {
+  background-color: var(--encuadre-superficie);
+  border: 1px solid var(--encuadre-texto-secundario);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1 1 400px;
+
+  &__titulo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+
+  &__subtitulo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--encuadre-texto-secundario);
+    margin: 0;
+  }
+}
+
+.imagen-placeholder {
+  background-color: var(--encuadre-fondo);
+  border-radius: 8px;
+  flex-shrink: 0;
+
+  &--vertical {
+    width: 144px;
+    height: 208px;
+  }
+
+  &--horizontal {
+    width: 100%;
+    height: 158px;
+  }
+}
+
+.pelicula-info {
+  display: flex;
+  gap: 24px;
+
+  &__detalle {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
+  }
+
+  &__nombre {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+
+  &__genero {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--encuadre-texto-secundario);
+    margin: 0;
+  }
+
+  &__calificacion {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--encuadre-acento);
+    margin: 0;
+  }
+}
+
+.btn--ancho-fijo {
+  width: 240px;
+}
+
+.btn--ancho-completo {
+  width: 100%;
+}
+
+.horario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__pelicula {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+
+  &__hora {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 34px;
+    color: var(--encuadre-acento);
+    margin: 0;
+  }
+}
+
+.mensaje-info {
+  background-color: var(--encuadre-superficie);
+  border: 1px solid var(--encuadre-acento);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__titulo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+
+  &__texto {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--encuadre-texto-secundario);
+    margin: 0;
+  }
+}
+
+.pregunta {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+  color: var(--encuadre-texto-principal);
+  margin: 0;
+}
+
+.accesos-rapidos {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+
+  a {
+    flex: 1 1 220px;
+  }
+}
