@@ -1,0 +1,134 @@
+.pantalla {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--encuadre-fondo);
+}
+
+.contenido {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1200px;
+}
+
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 48px;
+
+  &__titulo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+}
+
+.subtitulo {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--encuadre-texto-secundario);
+  margin: 0;
+}
+
+.tarjeta-confirmacion {
+  background-color: var(--encuadre-superficie);
+  border: 1px solid var(--encuadre-texto-secundario);
+  border-radius: 12px;
+  padding: 32px;
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.imagen-placeholder {
+  width: 264px;
+  height: 396px;
+  background-color: var(--encuadre-fondo);
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.boleta {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1 1 480px;
+
+  &__titulo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+
+  &__envio {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--encuadre-texto-secundario);
+    margin: 0;
+  }
+
+  &__pelicula {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+
+  &__detalle p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+.mensaje-info {
+  background-color: var(--encuadre-superficie);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &--exito {
+    border: 1px solid var(--encuadre-exito);
+  }
+
+  &__titulo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--encuadre-texto-principal);
+    margin: 0;
+  }
+
+  &__texto {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--encuadre-texto-secundario);
+    margin: 0;
+  }
+}
+
+.acciones {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.btn--ancho-mitad {
+  flex: 1 1 300px;
+}

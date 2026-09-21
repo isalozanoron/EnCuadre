@@ -1,0 +1,41 @@
+<div class="pantalla">
+  <app-sidebar activo="precios"></app-sidebar>
+
+  <div class="contenido">
+    <div class="encabezado">
+      <h1 class="encabezado__titulo">Función confirmada</h1>
+      <a mat-stroked-button class="btn-outline btn--ancho-header" routerLink="/mi-perfil">Mi perfil</a>
+    </div>
+
+    <p class="subtitulo">Tu próxima visita al cine ya está lista.</p>
+
+    <div class="tarjeta-confirmacion">
+      <!-- Placeholder genérico: no se reproduce el póster real por derechos de autor -->
+      <div class="imagen-placeholder"></div>
+
+      <div class="boleta">
+        <h2 class="boleta__titulo">¡Tu boleta está lista!</h2>
+        <p class="boleta__envio">La enviamos a isabella&#64;ejemplo.com.</p>
+        <p class="boleta__pelicula">Robot salvaje</p>
+
+        <div class="boleta__detalle">
+          <p>Cine Colombia · Bogotá</p>
+          <p>Sábado 12 de septiembre de 2026 · 20:30</p>
+          <p>Sala 3 · Asiento F8 · 1 boleta</p>
+          <p>Total pagado: $ 26.000 COP</p>
+        </div>
+
+        <div class="mensaje-info mensaje-info--exito">
+          <p class="mensaje-info__titulo">Continúa desde tu celular</p>
+          <p class="mensaje-info__texto">Abre EnCuadre → Mis funciones para configurar tu alarma de salida y el modo silencio.</p>
+        </div>
+
+        <div class="acciones">
+          <a mat-flat-button class="btn-primary btn--ancho-mitad" routerLink="/inicio">Ir al inicio</a>
+          <a mat-stroked-button class="btn-outline btn--ancho-mitad" routerLink="/mi-diario">Ver mi diario</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
