@@ -32,15 +32,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
 
-    <!-- Placeholder genérico de imagen (no se usa arte con derechos de autor) -->
-    <View
+    <ImageView
         android:id="@+id/iv_placeholder"
         android:layout_width="0dp"
         android:layout_height="200dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="24dp"
         android:layout_marginTop="30dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/poster_dragon"
         android:background="@drawable/bg_image_placeholder"
+        android:contentDescription="@string/maraton_saga"
         app:layout_constraintTop_toBottomOf="@id/tv_titulo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
