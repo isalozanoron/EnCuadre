@@ -26,6 +26,8 @@ html, body {
 .btn-outline {
   --mdc-outlined-button-container-shape: 8px;
   border: 1px solid var(--encuadre-acento) !important;
+  border-radius: 8px !important;
+  overflow: hidden;
   color: var(--encuadre-acento) !important;
   background: transparent !important;
   font-family: 'Inter', sans-serif;
@@ -38,6 +40,8 @@ html, body {
 /* Botón primario reutilizable (fondo acento, texto fondo oscuro) */
 .btn-primary {
   --mdc-filled-button-container-shape: 8px;
+  border-radius: 8px !important;
+  overflow: hidden;
   background-color: var(--encuadre-acento) !important;
   color: var(--encuadre-fondo) !important;
   font-family: 'Inter', sans-serif;
@@ -45,4 +49,9 @@ html, body {
   font-size: 14px;
   height: 48px;
   padding: 0 24px !important;
+}
+
+/* Ancho fijo del botón "Mi perfil" que se repite en el encabezado de cada pantalla */
+.btn--ancho-header {
+  width: 216px;
 }
