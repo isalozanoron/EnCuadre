@@ -52,4 +52,4 @@
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
     </style>
-</resources>
+<style name="ShapeAppearance.EnCuadre.FunctionCard" parent=""><item name="cornerSizeTopLeft">0dp</item><item name="cornerSizeTopRight">0dp</item><item name="cornerSizeBottomLeft">12dp</item><item name="cornerSizeBottomRight">12dp</item></style></resources>

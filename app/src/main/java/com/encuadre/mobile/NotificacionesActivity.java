@@ -36,17 +36,7 @@ public class NotificacionesActivity extends AppCompatActivity {
         View navBar = findViewById(R.id.nav_bar_bottom);
         NavBarHelper.marcarSeleccionado(this, navBar, NavBarHelper.Tab.AJUSTES);
 
-        // "Inicio", "Mis Funciones" y "Ajustes" son pantallas de Juan; mientras
-        // el las sube al repo, se navega a un placeholder para poder probar
-        // el flujo completo. Cuando existan, reemplazar por sus Activities reales.
-        navBar.findViewById(R.id.nav_item_inicio).setOnClickListener(v ->
-                irAPlaceholder("Inicio (pantalla de Juan)"));
-        navBar.findViewById(R.id.nav_item_mis_funciones).setOnClickListener(v ->
-                irAPlaceholder("Mis Funciones (pantalla de Juan)"));
-        navBar.findViewById(R.id.nav_item_ajustes).setOnClickListener(v ->
-                irAPlaceholder("Ajustes (pantalla de Juan)"));
-        navBar.findViewById(R.id.nav_item_perfil).setOnClickListener(v ->
-                startActivity(new Intent(NotificacionesActivity.this, PerfilActivity.class)));
+        NavBarHelper.conectar(this, navBar, NavBarHelper.Tab.AJUSTES);
     }
 
     /** Switch hecho a mano: contenedor (pista) + bolita, ambos con id propio. */
@@ -70,9 +60,4 @@ public class NotificacionesActivity extends AppCompatActivity {
         bolita.setLayoutParams(params);
     }
 
-    private void irAPlaceholder(String nombrePantalla) {
-        Intent intent = new Intent(NotificacionesActivity.this, PlaceholderActivity.class);
-        intent.putExtra(PlaceholderActivity.EXTRA_NOMBRE_PANTALLA, nombrePantalla);
-        startActivity(intent);
-    }
 }

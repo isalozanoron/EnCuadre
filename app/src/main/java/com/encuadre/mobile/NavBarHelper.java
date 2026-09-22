@@ -32,6 +32,12 @@ public final class NavBarHelper {
         aplicarEstado(context, navBar, R.id.nav_icon_container_perfil, R.id.nav_icon_perfil, tabActivo == Tab.PERFIL);
     }
 
+    public static void conectar(android.app.Activity activity, View nav, Tab active) {
+        int[] ids={R.id.nav_item_inicio,R.id.nav_item_mis_funciones,R.id.nav_item_ajustes,R.id.nav_item_perfil};
+        Class<?>[] destinos={HomeActivity.class,MisFuncionesActivity.class,AjustesActivity.class,PerfilActivity.class};
+        for(int i=0;i<ids.length;i++){final Class<?> destino=destinos[i];nav.findViewById(ids[i]).setOnClickListener(v->{if(activity.getClass()!=destino)activity.startActivity(new android.content.Intent(activity,destino).addFlags(android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP|android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP));});}
+    }
+
     private static void aplicarEstado(Context context, View navBar, int idContenedor, int idIcono, boolean seleccionado) {
         FrameLayout contenedor = navBar.findViewById(idContenedor);
         ImageView icono = navBar.findViewById(idIcono);

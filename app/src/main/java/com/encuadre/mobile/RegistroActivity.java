@@ -97,7 +97,8 @@ public class RegistroActivity extends AppCompatActivity {
             return;
         }
 
-        // Por ahora, cuenta "creada" localmente y se vuelve a Login para iniciar sesion.
+        // Una cuenta nueva aún no tiene funciones; estado local del prototipo.
+        getSharedPreferences("encuadre_demo", MODE_PRIVATE).edit().putBoolean("sin_funciones", true).apply();
         finish();
     }
 

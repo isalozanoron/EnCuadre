@@ -142,9 +142,7 @@ public class LoginActivity extends AppCompatActivity {
     private void navegarAInicio() {
         // "Inicio" es una pantalla de Juan (Mobile). Mientras el la agrega al repo,
         // se navega a un placeholder para poder probar el flujo completo de punta a punta.
-        // Cuando exista HomeActivity real, cambiar PlaceholderActivity.class por HomeActivity.class.
-        Intent intent = new Intent(LoginActivity.this, PlaceholderActivity.class);
-        intent.putExtra(PlaceholderActivity.EXTRA_NOMBRE_PANTALLA, "Inicio (pantalla de Juan)");
+        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
         startActivity(intent);
     }
 

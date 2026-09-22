@@ -49,6 +49,10 @@ public final class PushNotificationHelper {
      */
     public static void mostrar(Context context, String titulo, String texto,
                                Class<?> destino, String extraNombre) {
+        if (Build.VERSION.SDK_INT >= 33 && androidx.core.content.ContextCompat.checkSelfPermission(context,
+                android.Manifest.permission.POST_NOTIFICATIONS) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
         crearCanalSiHaceFalta(context);
 
         Intent intent = new Intent(context, destino);

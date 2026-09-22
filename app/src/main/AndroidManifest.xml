@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.encuadre.mobile">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 
@@ -31,10 +30,15 @@
              (PushNotificationHelper.java), disparado automáticamente desde
              SplashActivity — no es una Activity aparte -->
 
-        <!-- Pantallas de Juan (Mobile) — agregar aquí cuando él las suba a la rama:
-             HomeActivity (Inicio), RecomendacionActivity, EstrenoActivity, HorariosActivity,
-             MisFuncionesActivity, MiFuncionActivity, AlarmaSalidaActivity, AjustesActivity,
-             ModoSilencioActivity -->
+        <activity android:name=".HomeActivity" android:exported="false"/>
+        <activity android:name=".MisFuncionesActivity" android:exported="false"/>
+        <activity android:name=".MiFuncionActivity" android:exported="false"/>
+        <activity android:name=".AlarmaSalidaActivity" android:exported="false"/>
+        <activity android:name=".RecomendacionActivity" android:exported="false"/>
+        <activity android:name=".EstrenoActivity" android:exported="false"/>
+        <activity android:name=".HorariosActivity" android:exported="false"/>
+        <activity android:name=".AjustesActivity" android:exported="false"/>
+        <activity android:name=".ModoSilencioActivity" android:exported="false"/>
 
     </application>
 </manifest>

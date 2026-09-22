@@ -37,16 +37,7 @@ public class PerfilActivity extends AppCompatActivity {
         View navBar = findViewById(R.id.nav_bar_bottom);
         NavBarHelper.marcarSeleccionado(this, navBar, NavBarHelper.Tab.PERFIL);
 
-        // "Inicio", "Mis Funciones" y "Ajustes" son pantallas de Juan; mientras
-        // el las sube al repo, se navega a un placeholder para poder probar
-        // el flujo completo. Cuando existan, reemplazar por sus Activities reales.
-        navBar.findViewById(R.id.nav_item_inicio).setOnClickListener(v ->
-                irAPlaceholder("Inicio (pantalla de Juan)"));
-        navBar.findViewById(R.id.nav_item_mis_funciones).setOnClickListener(v ->
-                irAPlaceholder("Mis Funciones (pantalla de Juan)"));
-        navBar.findViewById(R.id.nav_item_ajustes).setOnClickListener(v ->
-                irAPlaceholder("Ajustes (pantalla de Juan)"));
-        // "Perfil" ya es esta misma pantalla, no navega a ningún lado.
+        NavBarHelper.conectar(this, navBar, NavBarHelper.Tab.PERFIL);
     }
 
     /** Toggle simple: clic alterna entre chip seleccionado (relleno acento) y normal (contorno). */
@@ -71,9 +62,4 @@ public class PerfilActivity extends AppCompatActivity {
         }
     }
 
-    private void irAPlaceholder(String nombrePantalla) {
-        Intent intent = new Intent(PerfilActivity.this, PlaceholderActivity.class);
-        intent.putExtra(PlaceholderActivity.EXTRA_NOMBRE_PANTALLA, nombrePantalla);
-        startActivity(intent);
-    }
 }

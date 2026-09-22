@@ -61,15 +61,15 @@ public class SplashActivity extends AppCompatActivity {
         PushNotificationHelper.mostrar(this,
                 getString(R.string.push_hora_salir_titulo),
                 getString(R.string.push_hora_salir_texto),
-                PlaceholderActivity.class, "Alarma de salida (pantalla de Juan)");
+                AlarmaSalidaActivity.class, null);
         PushNotificationHelper.mostrar(this,
                 getString(R.string.push_recomendacion_titulo),
                 getString(R.string.push_recomendacion_texto),
-                PlaceholderActivity.class, "Recomendación (pantalla de Juan)");
+                RecomendacionActivity.class, null);
         PushNotificationHelper.mostrar(this,
                 getString(R.string.push_estreno_titulo),
                 getString(R.string.push_estreno_texto),
-                PlaceholderActivity.class, "Estreno (pantalla de Juan)");
+                EstrenoActivity.class, null);
         PushNotificationHelper.mostrar(this,
                 getString(R.string.push_maraton_titulo),
                 getString(R.string.push_maraton_texto),
