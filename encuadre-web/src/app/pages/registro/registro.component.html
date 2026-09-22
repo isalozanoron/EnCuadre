@@ -1,0 +1,44 @@
+<app-auth-shell class="registro"
+  ><form class="stack" #form="ngForm" (ngSubmit)="crear(form)" novalidate>
+    <h1>Crea tu cuenta</h1>
+    <p class="muted">Empieza a guardar tus recuerdos del cine.</p>
+    <label class="field"
+      ><span>Nombre completo</span
+      ><input name="nombre" type="text" [(ngModel)]="nombre" required autocomplete="name" /></label
+    ><label class="field"
+      ><span>Correo electrónico</span
+      ><input
+        name="correo"
+        type="email"
+        [(ngModel)]="correo"
+        required
+        email
+        autocomplete="email" /></label
+    ><label class="field"
+      ><span>Contraseña</span
+      ><input
+        name="clave"
+        type="password"
+        [(ngModel)]="clave"
+        required
+        minlength="8"
+        autocomplete="new-password" /></label
+    ><label class="field"
+      ><span>Confirmar contraseña</span
+      ><input
+        name="confirmacion"
+        type="password"
+        [(ngModel)]="confirmacion"
+        required
+        autocomplete="new-password"
+    /></label>
+    <p class="muted small">Usa al menos 8 caracteres.</p>
+    @if (error()) {
+      <p class="notice error" role="alert">{{ error() }}</p>
+    }
+    <button mat-flat-button class="btn-primary full" type="submit">Crear cuenta</button
+    ><a mat-stroked-button class="btn-outline full" routerLink="/iniciar-sesion"
+      >Ya tengo una cuenta</a
+    >
+  </form></app-auth-shell
+>

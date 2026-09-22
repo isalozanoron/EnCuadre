@@ -6,10 +6,9 @@ import { DetalleEntradaComponent } from './pages/detalle-entrada/detalle-entrada
 import { PreciosComponent } from './pages/precios/precios.component';
 import { RevisarCompraComponent } from './pages/revisar-compra/revisar-compra.component';
 import { FuncionConfirmadaComponent } from './pages/funcion-confirmada/funcion-confirmada.component';
-import { EnConstruccionComponent } from './shared/en-construccion/en-construccion.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'inicio', pathMatch: 'full' },
+  { path: '', redirectTo: 'iniciar-sesion', pathMatch: 'full' },
   { path: 'inicio', component: InicioComponent },
   { path: 'mi-perfil', component: PerfilComponent },
   { path: 'mi-diario', component: DiarioComponent },
@@ -18,12 +17,41 @@ export const routes: Routes = [
   { path: 'revisar-compra', component: RevisarCompraComponent },
   { path: 'funcion-confirmada', component: FuncionConfirmadaComponent },
 
-  // Pantallas de Isabella pendientes (Web): reemplazar por su componente real cuando existan
-  { path: 'editar-perfil', component: EnConstruccionComponent, data: { nombre: 'Editar perfil (pendiente)' } },
-
-  // Pantallas de Juan (Web): reemplazar cuando él las suba a la rama
-  { path: 'donde-verla', component: EnConstruccionComponent, data: { nombre: 'Dónde verla (pantalla de Juan)' } },
-  { path: 'buscar-funciones', component: EnConstruccionComponent, data: { nombre: 'Buscar funciones (pantalla de Juan)' } },
-
-  { path: '**', redirectTo: 'inicio' }
+  {
+    path: 'iniciar-sesion',
+    loadComponent: () => import('./pages/login/login.component').then((m) => m.LoginComponent),
+  },
+  {
+    path: 'crear-cuenta',
+    loadComponent: () =>
+      import('./pages/registro/registro.component').then((m) => m.RegistroComponent),
+  },
+  {
+    path: 'recuperar-contrasena',
+    loadComponent: () =>
+      import('./pages/recuperar/recuperar.component').then((m) => m.RecuperarComponent),
+  },
+  {
+    path: 'editar-perfil',
+    loadComponent: () =>
+      import('./pages/editar-perfil/editar-perfil.component').then((m) => m.EditarPerfilComponent),
+  },
+  {
+    path: 'donde-verla',
+    loadComponent: () =>
+      import('./pages/donde-verla/donde-verla.component').then((m) => m.DondeVerlaComponent),
+  },
+  {
+    path: 'resultado-pelicula/:id',
+    loadComponent: () =>
+      import('./pages/resultado/resultado.component').then((m) => m.ResultadoComponent),
+  },
+  {
+    path: 'buscar-funciones',
+    loadComponent: () =>
+      import('./pages/buscar-funciones/buscar-funciones.component').then(
+        (m) => m.BuscarFuncionesComponent,
+      ),
+  },
+  { path: '**', redirectTo: 'inicio' },
 ];

@@ -33,6 +33,7 @@
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 21px;
+    line-height: 27px;
     color: var(--encuadre-texto-principal);
     margin: 0;
   }
@@ -44,7 +45,8 @@
   font-size: 12px;
   color: var(--encuadre-texto-secundario);
   margin: 0;
-  letter-spacing: 0.5px;
+  letter-spacing: 0;
+  line-height: 16px;
 }
 
 .destinos {
@@ -60,9 +62,10 @@
     font-weight: 500;
     font-size: 14px;
     color: var(--encuadre-texto-secundario);
-    border-radius: 8px !important;
+    border-radius: 28px !important;
     overflow: hidden;
     height: 48px !important;
+    padding: 0 24px !important;
 
     &--activo {
       background-color: var(--encuadre-acento) !important;
@@ -73,6 +76,7 @@
 
 .cuenta {
   margin-top: auto;
+  margin-bottom: 29px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -81,7 +85,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: var(--encuadre-fondo);
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,6 +96,7 @@
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 14px;
+    line-height: 18px;
     color: var(--encuadre-texto-principal);
     margin: 0;
   }
@@ -100,6 +105,7 @@
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 12px;
+    line-height: 16px;
     color: var(--encuadre-texto-secundario);
     margin: 0;
   }
@@ -107,8 +113,41 @@
   &__cerrar-sesion {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
+    line-height: 21px;
     color: var(--encuadre-acento);
     cursor: pointer;
     text-decoration: none;
+  }
+}
+@media (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    padding: 16px;
+  }
+  .sidebar__superior {
+    gap: 12px;
+  }
+  .eslogan,
+  .cuenta {
+    display: none;
+  }
+  .destinos {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 4px;
+  }
+  .destinos .destino {
+    flex: 0 0 auto;
+    width: auto;
+    padding: 0 14px;
+  }
+  .marca__logo {
+    width: 28px;
+    height: 28px;
+  }
+  .marca__texto {
+    font-size: 21px;
   }
 }

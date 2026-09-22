@@ -1,0 +1,53 @@
+<div class="pantalla">
+  <app-sidebar activo="precios" />
+  <main class="contenido">
+    <header class="encabezado">
+      <h1>Encuentra tu función</h1>
+      <a mat-stroked-button class="btn-outline btn--ancho-header" routerLink="/mi-perfil"
+        >Mi perfil</a
+      >
+    </header>
+    <p class="muted">Compara cines, precios y horarios antes de elegir.</p>
+    <form class="tarjeta stack compact" #form="ngForm" (ngSubmit)="buscar(form)">
+      <h3>Busca funciones</h3>
+      <div class="search" style="gap: 24px">
+        <label class="field"
+          ><span>Película</span
+          ><input name="pelicula" type="text" [(ngModel)]="pelicula" required /></label
+        ><label class="field"
+          ><span>Ciudad o cine</span
+          ><input name="ciudad" type="text" [(ngModel)]="ciudad" required /></label
+        ><button mat-flat-button class="btn-primary" style="width: 276px">Buscar funciones</button>
+      </div>
+      <p class="muted">Fecha: sábado 12 de septiembre de 2026</p>
+      @if (error()) {
+        <p class="notice error" role="alert">{{ error() }}</p>
+      }
+    </form>
+    <section class="grid cine-grid">
+      <article class="tarjeta stack compact" style="align-self: start">
+        <img src="/figma/search-robot.png" alt="Robot salvaje" />
+        <h2>Robot salvaje</h2>
+        <p class="muted">Una nueva historia para tu diario.</p>
+      </article>
+      <div class="stack compact">
+        <h2>Cines cercanos</h2>
+        @for (cine of cines; track cine.nombre) {
+          <article class="tarjeta cine">
+            <div class="stack" style="gap: 8px">
+              <h3>{{ cine.nombre }}</h3>
+              <p class="muted">{{ cine.ubicacion }}</p>
+            </div>
+            <p class="precio">Desde $ {{ cine.precio }}</p>
+          </article>
+        }
+      </div>
+    </section>
+    <aside class="notice info">
+      <strong>Conecta tu visita con la app</strong>
+      <p class="muted">
+        Cuando confirmes una función podrás configurar tu alarma de salida desde el celular.
+      </p>
+    </aside>
+  </main>
+</div>

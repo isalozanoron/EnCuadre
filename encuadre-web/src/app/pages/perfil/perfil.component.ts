@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { EstadoDemoService } from '../../shared/estado-demo.service';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
@@ -18,5 +19,6 @@ import { SidebarComponent } from '../../shared/sidebar/sidebar.component';
   styleUrl: './perfil.component.scss'
 })
 export class PerfilComponent {
-  generosFavoritos = ['Drama', 'Ciencia ficción', 'Suspenso'];
+  estado = inject(EstadoDemoService);
+  get generosFavoritos() { return this.estado.perfil().generos; }
 }

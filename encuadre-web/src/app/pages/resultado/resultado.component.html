@@ -1,0 +1,66 @@
+<div class="pantalla">
+  <app-sidebar activo="donde-verla" />
+  <main class="contenido">
+    <header class="encabezado">
+      <h1>Dónde verla</h1>
+      <a mat-stroked-button class="btn-outline btn--ancho-header" routerLink="/mi-perfil"
+        >Mi perfil</a
+      >
+    </header>
+    <p class="muted">Resultados / {{ nombre }}</p>
+    <a class="text-link" routerLink="/donde-verla">‹&#32;&#32;Buscar otra película</a>
+    @if (disponible) {
+      <section class="grid resultado">
+        <img class="poster" [src]="imagen" [alt]="nombre" />
+        <div class="stack">
+          <h1>{{ nombre }}</h1>
+          <p class="muted">{{ genero }}</p>
+          <p>{{ sinopsis }}</p>
+          <h2>Opciones en Colombia</h2>
+          <div class="grid plataformas">
+            @for (plataforma of plataformas; track plataforma) {
+              <article class="tarjeta stack compact">
+                <h3>{{ plataforma }}</h3>
+                <p class="muted">Suscripción</p>
+                <span class="badge">Disponible</span>
+              </article>
+            }
+          </div>
+          <p class="muted small">Consulta las condiciones de acceso en cada plataforma.</p>
+          <a
+            mat-stroked-button
+            class="btn-outline"
+            style="width: 360px; max-width: 100%"
+            routerLink="/buscar-funciones"
+            >Explorar funciones en cine</a
+          >
+        </div>
+      </section>
+    } @else {
+      <section class="tarjeta stack empty">
+        @if (imagen) {
+          <img [src]="imagen" [alt]="nombre" />
+        }
+        <h2>Aún no encontramos dónde verla</h2>
+        <p class="muted">
+          {{ nombre }} no está disponible en tus plataformas vinculadas. Podemos avisarte en la app
+          cuando haya una opción para verla.
+        </p>
+        @if (estado.aviso()) {
+          <div class="notice" role="status">
+            <strong>Aviso activado</strong>
+            <p class="muted">Recibirás una notificación en la aplicación EnCuadre.</p>
+          </div>
+          <button mat-stroked-button class="btn-outline" (click)="estado.aviso.set(false)">
+            Desactivar aviso
+          </button>
+        } @else {
+          <button mat-flat-button class="btn-primary" (click)="estado.aviso.set(true)">
+            Avisarme cuando esté disponible
+          </button>
+        }
+        <a mat-stroked-button class="btn-outline" routerLink="/donde-verla">Buscar otra película</a>
+      </section>
+    }
+  </main>
+</div>

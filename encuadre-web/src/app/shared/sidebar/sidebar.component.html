@@ -22,10 +22,10 @@
 
   <div class="cuenta">
     <div class="cuenta__avatar">
-      <mat-icon>person</mat-icon>
+      <img src="/figma/avatar.png" alt="" width="40" height="40">
     </div>
-    <p class="cuenta__nombre">Isabella Cano</p>
+    <p class="cuenta__nombre">{{estado.perfil().nombre}}</p>
     <p class="cuenta__tipo">Cuenta personal</p>
-    <a class="cuenta__cerrar-sesion">Cerrar sesión</a>
+    <a class="cuenta__cerrar-sesion" routerLink="/iniciar-sesion">Cerrar sesión</a>
   </div>
 </nav>

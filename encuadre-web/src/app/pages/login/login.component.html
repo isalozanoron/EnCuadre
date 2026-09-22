@@ -1,0 +1,37 @@
+<app-auth-shell
+  ><form class="stack" #form="ngForm" (ngSubmit)="entrar(form)" novalidate>
+    <h1>Inicia sesión</h1>
+    <p class="muted">Continúa con tu historia de cine.</p>
+    <label class="field" [class.invalid]="error()"
+      ><span>Correo electrónico</span
+      ><input
+        name="correo"
+        type="email"
+        [(ngModel)]="correo"
+        required
+        email
+        autocomplete="email"
+        [attr.aria-invalid]="error()"
+    /></label>
+    <label class="field" [class.invalid]="error()"
+      ><span>Contraseña</span
+      ><input
+        name="clave"
+        type="password"
+        [(ngModel)]="clave"
+        required
+        autocomplete="current-password"
+        [attr.aria-invalid]="error()"
+    /></label>
+    @if (error()) {
+      <div class="notice error" role="alert">
+        <strong>No pudimos iniciar sesión</strong>
+        <p class="muted">Revisa tu correo y contraseña e inténtalo de nuevo.</p>
+      </div>
+    }
+    <button mat-flat-button class="btn-primary full" type="submit">Iniciar sesión</button
+    ><a class="text-link" routerLink="/recuperar-contrasena">¿Olvidaste tu contraseña?</a>
+    <p class="muted">¿Primera vez en EnCuadre?</p>
+    <a mat-stroked-button class="btn-outline full" routerLink="/crear-cuenta">Crear cuenta</a>
+  </form></app-auth-shell
+>

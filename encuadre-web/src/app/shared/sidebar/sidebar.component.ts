@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { EstadoDemoService } from '../estado-demo.service';
+import { Component, Input, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { MatListModule } from '@angular/material/list';
@@ -20,6 +21,7 @@ export type DestinoSidebar = 'inicio' | 'perfil' | 'diario' | 'donde-verla' | 'p
   styleUrl: './sidebar.component.scss'
 })
 export class SidebarComponent {
+  estado = inject(EstadoDemoService);
   @Input() activo: DestinoSidebar = 'inicio';
 
   destinos: { id: DestinoSidebar; etiqueta: string; ruta: string }[] = [
@@ -27,6 +29,6 @@ export class SidebarComponent {
     { id: 'perfil', etiqueta: 'Mi perfil', ruta: '/mi-perfil' },
     { id: 'diario', etiqueta: 'Mi diario', ruta: '/mi-diario' },
     { id: 'donde-verla', etiqueta: 'Dónde verla', ruta: '/donde-verla' },
-    { id: 'precios', etiqueta: 'Precios y horarios', ruta: '/precios-y-horarios' }
+    { id: 'precios', etiqueta: 'Precios y horarios', ruta: '/buscar-funciones' }
   ];
 }

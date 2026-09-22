@@ -1,59 +1,57 @@
-# EncuadreWeb
+# EnCuadre · Web
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.24.
+Maquetación navegable para la entrega de UI/UX de la maestría. Rama `EnCuadre-Web`, compartida por Isabella Lozano y Juan F. Rodríguez.
 
-## Development server
+## Ejecutar
 
-To start a local development server, run:
+Requiere Node.js **20.19+**, **22.12+** o **24+** y npm. Se validó con Node 24.19.0.
 
-```bash
-ng serve
+```sh
+npm ci
+npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Abrir http://localhost:4200. Evitar carpetas que contengan `:` en su nombre: interfieren con la carga de recursos del servidor de desarrollo.
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```sh
+npm run build
+npm test -- --watch=false
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+El sitio compilado queda en `dist/encuadre-web/browser`. En un servidor web debe configurarse la redirección de rutas de la SPA a `index.html`.
 
-```bash
-ng generate --help
-```
+## Versiones
 
-## Building
+Angular 21.2.23, Angular Material/CDK 21.2.14, Angular CLI 21.2.24, TypeScript 5.9.3 y Vitest 4.1.11. Las versiones reproducibles están en `package-lock.json`.
 
-To build the project run:
+## Pantallas de Juan
 
-```bash
-ng build
-```
+| Ruta | Figma | Estados / navegación |
+|---|---|---|
+| `/iniciar-sesion` | Web 00, 01, 02 | Vacío, con datos, error; acceso a Inicio |
+| `/crear-cuenta` | Web 03 | Campos editables, validación y confirmación de contraseña |
+| `/recuperar-contrasena` | Web 04, 05 | Solicitud, correo enviado, usar otro correo |
+| `/donde-verla` | Web 30 | Buscar película y explorar tarjetas |
+| `/resultado-pelicula/dragon` | Web 31 | Plataformas disponibles |
+| `/resultado-pelicula/avengers` | Web 32, 33 | Sin disponibilidad; activar/desactivar aviso |
+| `/buscar-funciones` | Web 40 | Búsqueda y conexión con comparación de precios |
+| `/editar-perfil` | Web 12 | Editar, seleccionar géneros, guardar o cancelar |
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Los frames de resultado y sus variantes constituyen una sola pantalla de código: **7 pantallas de Juan**. Se conservan las 7 pantallas de Isabella y se integran con las nuevas rutas.
 
-## Running unit tests
+Diseño: [EnCuadre, página Web](https://www.figma.com/design/Xg4wjxPwcy2nyZnCnJp0Xz/EnCuadre-Mockups--Copy-?node-id=2-4).
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## Probar los recorridos
 
-```bash
-ng test
-```
+- Acceso: cualquier correo con formato válido y una contraseña de 8 caracteres permite recorrer la demo. Vacío o contraseña corta muestra el error de Figma. Por ejemplo: `isabella@ejemplo.com` / `encuadre123`.
+- Registro: campos requeridos, correo válido, mínimo 8 caracteres y contraseñas iguales.
+- Recuperación: solicitar con un correo válido; aparece la confirmación. **No se envían correos reales**.
+- Dónde verla: buscar «Cómo entrenar a tu dragón»; volver y abrir «Avengers: Doomsday» para activar y desactivar el aviso.
+- Funciones: datos de ejemplo «Robot salvaje» en «Bogotá»; continuar a comparar, revisar y confirmar. Las demás búsquedas muestran un mensaje sin resultados.
+- Perfil: modificar nombre y géneros, guardar y comprobarlos en Mi perfil. Cancelar conserva el último perfil guardado.
 
-## Running end-to-end tests
+Todos los datos son de muestra. No hay autenticación, pagos, suscripciones, consultas de disponibilidad ni notificaciones remotas reales. Los cambios de perfil y avisos viven en memoria mientras la aplicación permanece abierta; recargar reinicia la demo.
 
-For end-to-end (e2e) testing, run:
+## Diseño y recursos
 
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Inter, Roboto y los iconos se sirven localmente; sus licencias están en `public/fonts`. `public/figma` contiene exportaciones del diseño (imágenes y avatar), no capturas de pantallas usadas en lugar de componentes. Formularios, botones, tarjetas y navegación son elementos interactivos reales. Se reutilizan los tokens `--encuadre-*`, Angular Material y la barra lateral existente.

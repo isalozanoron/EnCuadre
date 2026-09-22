@@ -1,0 +1,40 @@
+<div class="pantalla">
+  <app-sidebar activo="donde-verla" />
+  <main class="contenido">
+    <header class="encabezado">
+      <h1>Dónde verla</h1>
+      <a mat-stroked-button class="btn-outline btn--ancho-header" routerLink="/mi-perfil"
+        >Mi perfil</a
+      >
+    </header>
+    <p class="muted">Encuentra tu próxima película y descubre dónde disfrutarla.</p>
+    <form class="tarjeta stack compact" (ngSubmit)="buscar()">
+      <h3>¿Qué quieres ver hoy?</h3>
+      <div class="search">
+        <label class="field"
+          ><span>Nombre de la película</span
+          ><input name="busqueda" type="text" [(ngModel)]="busqueda" required /></label
+        ><button mat-flat-button class="btn-primary">Buscar</button>
+      </div>
+      <p class="muted small">Opciones de streaming en Colombia, reunidas en un solo lugar.</p>
+    </form>
+    <h2>Películas para explorar</h2>
+    <div class="grid peliculas">
+      @for (p of peliculas; track p.id) {
+        <article class="tarjeta pelicula">
+          <img [src]="p.imagen" [alt]="p.nombre" />
+          <h3>{{ p.nombre }}</h3>
+          <p class="muted small">{{ p.genero }}</p>
+          @if (p.accion) {
+            <a
+              mat-stroked-button
+              class="btn-outline full"
+              [routerLink]="['/resultado-pelicula', p.id]"
+              >{{ p.accion }}</a
+            >
+          }
+        </article>
+      }
+    </div>
+  </main>
+</div>

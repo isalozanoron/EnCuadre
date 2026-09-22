@@ -1,0 +1,87 @@
+.acceso {
+  display: grid;
+  grid-template-columns: 600fr 840fr;
+  min-height: 100vh;
+}
+.presentacion {
+  background: var(--encuadre-superficie);
+  padding: 56px;
+  min-height: 900px;
+}
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 30px;
+}
+.marca img {
+  border-radius: 8px;
+}
+.posters {
+  display: flex;
+  gap: 16px;
+  margin: 66px 0 62px;
+}
+.posters img {
+  width: calc((100% - 32px) / 3);
+  height: 238px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.presentacion h2 {
+  font-size: 30px;
+  line-height: 1.3;
+  margin: 0 0 24px;
+}
+.presentacion p {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--encuadre-texto-secundario);
+  max-width: 440px;
+  margin: 0 0 24px;
+}
+.presentacion .puente {
+  color: var(--encuadre-acento);
+  line-height: 1.3;
+}
+.formulario {
+  width: 520px;
+  max-width: calc(100% - 64px);
+  margin: 160px auto 48px;
+}
+:host(.registro) .formulario {
+  margin-top: 100px;
+}
+@media (max-width: 1000px) {
+  .presentacion {
+    padding: 32px;
+  }
+  .posters {
+    gap: 10px;
+  }
+  .posters img {
+    height: 200px;
+  }
+}
+@media (max-width: 700px) {
+  .acceso {
+    display: block;
+  }
+  .presentacion {
+    min-height: 0;
+    padding: 24px;
+  }
+  .marca {
+    font-size: 24px;
+  }
+  .posters,
+  .presentacion h2,
+  .presentacion p {
+    display: none;
+  }
+  .formulario,
+  :host(.registro) .formulario {
+    margin: 40px auto;
+    max-width: calc(100% - 40px);
+  }
+}

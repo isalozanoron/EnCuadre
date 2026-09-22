@@ -9,16 +9,17 @@
 
     <p class="subtitulo">Tus gustos hacen que cada recomendación sea más tuya.</p>
 
+    @if(estado.perfilActualizado()){<p role="status" style="border:1px solid var(--encuadre-exito);border-radius:12px;padding:16px;margin:0">Perfil actualizado</p>}
     <div class="datos-perfil">
 
       <!-- Tarjeta de datos personales -->
       <div class="tarjeta tarjeta--datos">
-        <p class="tarjeta__titulo">Isabella Cano</p>
+        <p class="tarjeta__titulo">{{estado.perfil().nombre}}</p>
         <div class="avatar">
           <mat-icon>person</mat-icon>
         </div>
-        <p class="dato-secundario">22 años · Bogotá, Colombia</p>
-        <p class="bio">Amante del cine de misterio y las historias que se quedan contigo.</p>
+        <p class="dato-secundario">{{estado.perfil().edad}} años · {{estado.perfil().ciudad}}</p>
+        <p class="bio">{{estado.perfil().bio}}</p>
         <a mat-flat-button class="btn-primary btn--ancho-completo" routerLink="/editar-perfil">Editar perfil</a>
       </div>
 

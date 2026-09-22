@@ -1,0 +1,68 @@
+<div class="pantalla">
+  <app-sidebar activo="perfil" />
+  <main class="contenido">
+    <header class="encabezado">
+      <h1>Editar perfil</h1>
+      <a mat-stroked-button class="btn-outline btn--ancho-header" routerLink="/mi-perfil"
+        >Mi perfil</a
+      >
+    </header>
+    <p class="muted">Actualiza tus datos y preferencias.</p>
+    <a class="text-link" routerLink="/mi-perfil">‹&#32;&#32;Volver a mi perfil</a>
+    <div class="grid perfil-grid">
+      <aside class="tarjeta stack compact foto">
+        <h3>Foto de perfil</h3>
+        <p class="muted">JPG o PNG · Máximo 5 MB</p>
+        <div class="avatar">
+          <img src="/figma/avatar-large.png" alt="Imagen de tu cuenta" width="144" height="144" />
+        </div>
+        <p class="muted small">Imagen de tu cuenta</p>
+      </aside>
+      <form
+        class="tarjeta stack compact"
+        style="gap: 20px"
+        #form="ngForm"
+        (ngSubmit)="guardar(form)"
+      >
+        <div class="grid nombre-edad">
+          <label class="field"
+            ><span>Nombre</span
+            ><input name="nombre" type="text" [(ngModel)]="nombre" required maxlength="80" /></label
+          ><label class="field"
+            ><span>Edad</span
+            ><input name="edad" type="number" [(ngModel)]="edad" required min="18" max="120"
+          /></label>
+        </div>
+        <label class="field"
+          ><span>Ciudad</span
+          ><input name="ciudad" type="text" [(ngModel)]="ciudad" required /></label
+        ><label for="bio">Sobre mí</label
+        ><label class="field">
+          <textarea id="bio" name="bio" [(ngModel)]="bio" maxlength="400"></textarea>
+        </label>
+        <h3>Géneros favoritos</h3>
+        <p class="muted">Selecciona tus géneros y guarda los cambios.</p>
+        <div class="generos">
+          @for (g of opciones; track g) {
+            <button
+              mat-button
+              type="button"
+              [class]="generos.includes(g) ? 'btn-primary' : 'btn-outline'"
+              [attr.aria-pressed]="generos.includes(g)"
+              (click)="alternar(g)"
+            >
+              {{ g }}
+            </button>
+          }
+        </div>
+        @if (error()) {
+          <p class="notice error" role="alert">Revisa tu nombre, ciudad y edad (18 a 120 años).</p>
+        }
+        <div class="actions">
+          <button mat-flat-button class="btn-primary" type="submit">Guardar cambios</button
+          ><a mat-stroked-button class="btn-outline" routerLink="/mi-perfil">Cancelar</a>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>
