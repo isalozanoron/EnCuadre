@@ -55,7 +55,7 @@ Por el requisito de "pixel-perfect sin excepciones", se listan aquí las diferen
 | Ruta | Figma | Estados / navegación |
 |---|---|---|
 | `/iniciar-sesion` | Web 00, 01, 02 | Vacío, con datos, error; acceso a Inicio |
-| `/crear-cuenta` | Web 03 | Campos editables, validación y confirmación de contraseña |
+| `/crear-cuenta` | Web 03 | Campos editables; cualquier texto no vacío permite avanzar |
 | `/recuperar-contrasena` | Web 04, 05 | Solicitud, correo enviado, usar otro correo |
 | `/donde-verla` | Web 30 | Buscar película y explorar tarjetas |
 | `/resultado-pelicula/dragon` | Web 31 | Plataformas disponibles |
@@ -69,8 +69,8 @@ Diseño: [EnCuadre, página Web](https://www.figma.com/design/Xg4wjxPwcy2nyZnCnJ
 
 ## Probar los recorridos
 
-- Acceso: cualquier correo con formato válido y una contraseña de 8 caracteres permite recorrer la demo. Vacío o contraseña corta muestra el error de Figma. Por ejemplo: `isabella@ejemplo.com` / `encuadre123`.
-- Registro: campos requeridos, correo válido, mínimo 8 caracteres y contraseñas iguales.
+- Acceso: escribir cualquier texto no vacío en ambos campos permite avanzar a Inicio, por ejemplo `prueba` / `a`. Los campos vacíos muestran el estado de error.
+- Registro: basta con escribir cualquier texto no vacío en los cuatro campos. No se exige formato de correo, longitud mínima ni que las contraseñas coincidan. La indicación de ocho caracteres se conserva como texto del diseño.
 - Recuperación: solicitar con un correo válido; aparece la confirmación. **No se envían correos reales**.
 - Dónde verla: buscar «Cómo entrenar a tu dragón»; volver y abrir «Avengers: Doomsday» para activar y desactivar el aviso.
 - Funciones: datos de ejemplo «Robot salvaje» en «Bogotá»; continuar a comparar, revisar y confirmar. Las demás búsquedas muestran un mensaje sin resultados.

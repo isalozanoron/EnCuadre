@@ -1,5 +1,5 @@
 <app-auth-shell class="registro"
-  ><form class="stack" #form="ngForm" (ngSubmit)="crear(form)" novalidate>
+  ><form class="stack" (ngSubmit)="crear()" novalidate>
     <h1>Crea tu cuenta</h1>
     <p class="muted">Empieza a guardar tus recuerdos del cine.</p>
     <label class="field"
@@ -9,10 +9,10 @@
       ><span>Correo electrónico</span
       ><input
         name="correo"
-        type="email"
+        type="text"
+        inputmode="email"
         [(ngModel)]="correo"
         required
-        email
         autocomplete="email" /></label
     ><label class="field"
       ><span>Contraseña</span
@@ -21,7 +21,6 @@
         type="password"
         [(ngModel)]="clave"
         required
-        minlength="8"
         autocomplete="new-password" /></label
     ><label class="field"
       ><span>Confirmar contraseña</span

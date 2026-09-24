@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { AuthShellComponent } from '../../shared/auth-shell/auth-shell.component';
@@ -16,8 +16,8 @@ export class LoginComponent {
   clave = '';
   error = signal(false);
   private router = inject(Router);
-  entrar(form: NgForm) {
-    if (form.invalid || this.clave.length < 8) {
+  entrar() {
+    if (!this.correo.trim() || !this.clave.trim()) {
       this.error.set(true);
       return;
     }

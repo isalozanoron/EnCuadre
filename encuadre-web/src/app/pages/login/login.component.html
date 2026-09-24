@@ -1,15 +1,16 @@
 <app-auth-shell
-  ><form class="stack" #form="ngForm" (ngSubmit)="entrar(form)" novalidate>
+  ><form class="stack" (ngSubmit)="entrar()" novalidate>
     <h1>Inicia sesión</h1>
     <p class="muted">Continúa con tu historia de cine.</p>
     <label class="field" [class.invalid]="error()"
       ><span>Correo electrónico</span
       ><input
         name="correo"
-        type="email"
+        type="text"
+        inputmode="email"
         [(ngModel)]="correo"
+        (ngModelChange)="error.set(false)"
         required
-        email
         autocomplete="email"
         [attr.aria-invalid]="error()"
     /></label>
@@ -19,6 +20,7 @@
         name="clave"
         type="password"
         [(ngModel)]="clave"
+        (ngModelChange)="error.set(false)"
         required
         autocomplete="current-password"
         [attr.aria-invalid]="error()"

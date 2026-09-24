@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { AuthShellComponent } from '../../shared/auth-shell/auth-shell.component';
@@ -18,15 +18,9 @@ export class RegistroComponent {
   confirmacion = '';
   error = signal('');
   private router = inject(Router);
-  crear(form: NgForm) {
-    if (form.invalid || !this.nombre.trim()) {
-      this.error.set(
-        'Completa tus datos. Usa un correo válido y una contraseña de al menos 8 caracteres.',
-      );
-      return;
-    }
-    if (this.clave !== this.confirmacion) {
-      this.error.set('Las contraseñas no coinciden.');
+  crear() {
+    if (![this.nombre, this.correo, this.clave, this.confirmacion].every((valor) => valor.trim())) {
+      this.error.set('Completa todos los campos para continuar.');
       return;
     }
     this.router.navigateByUrl('/inicio');
