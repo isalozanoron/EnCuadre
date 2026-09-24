@@ -42,11 +42,15 @@ app/src/main/
 
 ## Pantallas/componentes implementados (Isabella - 8 de 8)
 
-Splash, Login, Registro, Perfil, Notificaciones (Ajustes), Bandeja de notificaciones, Maratón pendiente, Push Banner (implementado como notificación real del sistema Android, se dispara automáticamente al abrir la app).
+Splash, Login, Registro, Perfil, Notificaciones (Ajustes), Bandeja de notificaciones, Maratón pendiente, Push Banner.
 
 ## Notas
-- El switch de la pantalla de Notificaciones y la barra de navegación inferior se construyeron a mano (no con el widget `Switch` nativo de Android), ya que este no respetaba bien los colores ni el tamaño exacto del diseño.
-- La barra de navegación inferior (`nav_bar_bottom.xml` + `NavBarHelper.java`) es un componente reutilizado en las 4 pantallas que la necesitan.
+
+- El switch de la pantalla de Notificaciones, los campos de texto de Login/Registro y la barra de navegación inferior se construyeron a mano (no con los widgets nativos `Switch`/`TextInputLayout` de Android), ya que estos no respetaban bien los colores, tamaños ni los distintos estados (enfocado, error) del diseño.
+- La barra de navegación inferior (`nav_bar_figma.xml`, con la lógica de selección de ícono en `BasePantallaActivity.java` y `NavBarHelper.java`) es un componente compartido, reutilizado en las 9 pantallas que la necesitan.
+- **Push Banner:** las 4 notificaciones (Hora de salir, Recomendación, Estreno, Maratón) se implementan como notificaciones reales del sistema Android (`PushNotificationHelper.java` + `NotificationManager`), no como una vista simulada dentro de la app, y se disparan automáticamente al abrir la app (desde `SplashActivity`), no por una acción manual del usuario. Requieren el permiso `POST_NOTIFICATIONS` en Android 13+, pedido en tiempo de ejecución. Tocar una notificación navega a la pantalla correspondiente.
+- **Bandeja de notificaciones:** el espacio entre cada tarjeta se ajustó a un valor distinto al de Figma, por preferencia de diseño.
+- El mensaje del botón "No me interesa" en Maratón pendiente no tiene un frame de Figma que lo respalde con un texto específico; se usa un texto genérico razonable.
 
 ## Pantallas de Juan · 9 de 9
 
