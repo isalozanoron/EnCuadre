@@ -48,76 +48,118 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Error nativo de Material: icono automatico, borde blanco/mas grueso, texto rojo.
-         Nota: la etiqueta flotante tambien la pinta de rojo Material por su cuenta;
-         no coincide 100% con Figma (que la deja blanca), se deja asi por ahora. -->
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_correo"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <!-- Campo Correo: vista propia, no TextInputLayout (control total de bordes/etiqueta/estado).
+         La etiqueta va como hermano (no hijo) del contenedor, superpuesta encima del borde,
+         para que nada la recorte. -->
+    <FrameLayout
+        android:id="@+id/campo_correo"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="56dp"
         android:layout_marginTop="40dp"
-        android:hint="@string/label_correo"
-        app:boxBackgroundColor="@android:color/transparent"
-        app:boxCornerRadiusBottomEnd="4dp"
-        app:boxCornerRadiusBottomStart="4dp"
-        app:boxCornerRadiusTopEnd="4dp"
-        app:boxCornerRadiusTopStart="4dp"
-        app:boxStrokeColor="@color/encuadre_texto_secundario"
-        app:boxStrokeErrorColor="@color/encuadre_texto_principal"
-        app:boxStrokeWidthFocused="3dp"
-        app:endIconMode="clear_text"
-        app:endIconTint="@color/encuadre_texto_secundario"
-        app:errorIconTint="@color/encuadre_error"
-        app:errorTextColor="@color/encuadre_error"
-        app:expandedHintEnabled="false"
-        app:hintTextColor="@color/encuadre_texto_secundario"
+        android:background="@drawable/bg_campo_normal"
         app:layout_constraintTop_toBottomOf="@id/tv_subtitulo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:id="@+id/et_correo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="48dp"
+            android:background="@null"
+            android:gravity="center_vertical"
             android:inputType="textEmailAddress"
             android:maxLines="1"
-            android:textColor="@color/encuadre_texto_principal"/>
+            android:textColor="@color/encuadre_texto_principal"
+            android:textCursorDrawable="@drawable/cursor_login"
+            android:textSize="14sp"/>
 
-    </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+            android:id="@+id/iv_estado_correo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_clear_field"
+            app:tint="@color/encuadre_texto_secundario"
+            android:contentDescription="@string/label_correo"/>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/til_contrasena"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_label_correo"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="-9dp"
+        android:background="@color/encuadre_fondo"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="@string/label_correo"
+        android:textColor="@color/encuadre_texto_secundario"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/campo_correo"
+        app:layout_constraintStart_toStartOf="@id/campo_correo"/>
+
+    <!-- Campo Contraseña: sin ícono a la derecha (fiel a Figma) -->
+    <FrameLayout
+        android:id="@+id/campo_contrasena"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
         android:layout_marginTop="12dp"
-        android:hint="@string/label_contrasena"
-        app:boxBackgroundColor="@android:color/transparent"
-        app:boxCornerRadiusBottomEnd="4dp"
-        app:boxCornerRadiusBottomStart="4dp"
-        app:boxCornerRadiusTopEnd="4dp"
-        app:boxCornerRadiusTopStart="4dp"
-        app:boxStrokeColor="@color/encuadre_texto_secundario"
-        app:boxStrokeErrorColor="@color/encuadre_texto_principal"
-        app:boxStrokeWidthFocused="3dp"
-        app:errorIconTint="@color/encuadre_error"
-        app:errorTextColor="@color/encuadre_error"
-        app:expandedHintEnabled="false"
-        app:hintTextColor="@color/encuadre_texto_secundario"
-        app:layout_constraintTop_toBottomOf="@id/til_correo"
+        android:background="@drawable/bg_campo_normal"
+        app:layout_constraintTop_toBottomOf="@id/campo_correo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
             android:id="@+id/et_contrasena"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@null"
+            android:gravity="center_vertical"
             android:inputType="textPassword"
             android:maxLines="1"
-            android:textColor="@color/encuadre_texto_principal"/>
+            android:textColor="@color/encuadre_texto_principal"
+            android:textCursorDrawable="@drawable/cursor_login"
+            android:textSize="14sp"/>
 
-    </com.google.android.material.textfield.TextInputLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_label_contrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="-9dp"
+        android:background="@color/encuadre_fondo"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:text="@string/label_contrasena"
+        android:textColor="@color/encuadre_texto_secundario"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/campo_contrasena"
+        app:layout_constraintStart_toStartOf="@id/campo_contrasena"/>
+
+    <!-- Mensaje de error: solo aparece bajo Contraseña, como en el mockup -->
+    <TextView
+        android:id="@+id/tv_error_contrasena"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:paddingStart="16dp"
+        android:text="@string/error_campos_vacios"
+        android:textColor="@color/encuadre_texto_principal"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/campo_contrasena"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <!-- Boton principal: NO estirado, se ajusta al texto y queda centrado. Texto oscuro sobre fondo acento. -->
     <Button
@@ -136,7 +178,7 @@
         android:textColor="@color/encuadre_fondo"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/til_contrasena"
+        app:layout_constraintTop_toBottomOf="@id/tv_error_contrasena"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 

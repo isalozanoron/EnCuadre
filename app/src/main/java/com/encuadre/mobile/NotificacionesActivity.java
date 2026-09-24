@@ -20,6 +20,9 @@ import androidx.appcompat.app.AppCompatActivity;
  */
 public class NotificacionesActivity extends AppCompatActivity {
 
+    private static final int TAMANO_BOLITA_ON_DP = 24;
+    private static final int TAMANO_BOLITA_OFF_DP = 16;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,10 +55,25 @@ public class NotificacionesActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * Desactivado (confirmado contra Figma): pista #E0E0E0 con borde 2dp #666666,
+     * bolita más chica (16dp en vez de 24dp) y en #666666, no la misma bolita
+     * del estado activado solo movida de lado.
+     */
     private void aplicarEstadoSwitch(FrameLayout pista, View bolita, boolean encendido) {
         pista.setBackgroundResource(encendido ? R.drawable.bg_switch_track_on : R.drawable.bg_switch_track_off);
+        bolita.setBackgroundResource(encendido ? R.drawable.bg_switch_thumb : R.drawable.bg_switch_thumb_off);
+
+        float densidad = bolita.getResources().getDisplayMetrics().density;
+        int tamanoDp = encendido ? TAMANO_BOLITA_ON_DP : TAMANO_BOLITA_OFF_DP;
+        int tamanoPx = Math.round(tamanoDp * densidad);
 
         FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) bolita.getLayoutParams();
+        params.width = tamanoPx;
+        params.height = tamanoPx;
+        int margenPx = Math.round(4 * densidad);
+        params.leftMargin = encendido ? 0 : margenPx;
+        params.rightMargin = encendido ? margenPx : 0;
         params.gravity = Gravity.CENTER_VERTICAL | (encendido ? Gravity.END : Gravity.START);
         bolita.setLayoutParams(params);
     }

@@ -61,7 +61,7 @@
     <string name="maraton_descripcion">Ya viste la primera película. Continúa con la segunda y la tercera entrega cuando tengas tiempo. Guarda el recordatorio para volver a encontrarlas aquí.</string>
     <string name="maraton_me_interesa">★ Me interesa</string>
     <string name="maraton_no_me_interesa">No me interesa</string>
-    <string name="maraton_guardado">Maratón guardado</string>
+    <string name="maraton_guardado">Recordatorio de maratón guardado</string>
     <string name="maraton_descartado">Descartado</string>
 
     <!-- Push Banner (notificaciones del sistema) — texto confirmado con Figma -->
@@ -74,4 +74,5 @@
     <string name="push_estreno_texto">Avengers: Doomsday ya está disponible</string>
     <string name="push_maraton_titulo">Tu maratón te espera</string>
     <string name="push_maraton_texto">Continúa la saga de Cómo entrenar a tu dragón</string>
+    <string name="snackbar_perfil_actualizado">Perfil actualizado</string>
 </resources>

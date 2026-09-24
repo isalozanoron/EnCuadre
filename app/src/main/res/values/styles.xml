@@ -49,7 +49,8 @@
         <item name="android:textColor">@color/encuadre_texto_secundario</item>
         <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
     </style>
-<style name="ShapeAppearance.EnCuadre.FunctionCard" parent=""><item name="cornerSizeTopLeft">0dp</item><item name="cornerSizeTopRight">0dp</item><item name="cornerSizeBottomLeft">12dp</item><item name="cornerSizeBottomRight">12dp</item></style></resources>
+    <style name="ShapeAppearance.EnCuadre.FunctionCard" parent=""><item name="cornerSizeTopLeft">0dp</item><item name="cornerSizeTopRight">0dp</item><item name="cornerSizeBottomLeft">12dp</item><item name="cornerSizeBottomRight">12dp</item></style></resources>

@@ -1,25 +1,24 @@
 package com.encuadre.mobile;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 /**
  * Pantalla Perfil.
  * Prototipo no funcional: los chips de género se pueden tocar para
  * seleccionar/quitar (interacción visual local), sin persistir nada real.
- * La barra de navegación inferior es compartida (nav_bar_bottom.xml + NavBarHelper).
+ * La barra de navegación inferior usa nav_bar_figma (el mismo componente
+ * que ya usan las pantallas de Juan, con los íconos/colores correctos),
+ * a través de BasePantallaActivity.
  */
-public class PerfilActivity extends AppCompatActivity {
+public class PerfilActivity extends BasePantallaActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_perfil);
+        pantalla(R.layout.activity_perfil, NavBarHelper.Tab.PERFIL);
 
         // Estado inicial igual al mockup: Ciencia ficción, Drama y Suspenso ya seleccionados
         TextView chipThriller = findViewById(R.id.chip_thriller);
@@ -33,11 +32,6 @@ public class PerfilActivity extends AppCompatActivity {
         configurarChip(chipDrama, true);
         configurarChip(chipComedia, false);
         configurarChip(chipSuspenso, true);
-
-        View navBar = findViewById(R.id.nav_bar_bottom);
-        NavBarHelper.marcarSeleccionado(this, navBar, NavBarHelper.Tab.PERFIL);
-
-        NavBarHelper.conectar(this, navBar, NavBarHelper.Tab.PERFIL);
     }
 
     /** Toggle simple: clic alterna entre chip seleccionado (relleno acento) y normal (contorno). */
@@ -49,6 +43,7 @@ public class PerfilActivity extends AppCompatActivity {
             boolean nuevoEstado = !estadoActual;
             aplicarEstadoChip(chip, nuevoEstado);
             v.setTag(nuevoEstado);
+            mensaje(getString(R.string.snackbar_perfil_actualizado));
         });
     }
 
