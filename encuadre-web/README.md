@@ -81,4 +81,4 @@ Todos los datos son de muestra. No hay autenticación, pagos, suscripciones, con
 
 ## Diseño y recursos
 
-Inter, Roboto y los iconos se sirven localmente; sus licencias están en `public/fonts`. `public/figma` contiene exportaciones del diseño (imágenes y avatar), no capturas de pantallas usadas en lugar de componentes. Formularios, botones, tarjetas y navegación son elementos interactivos reales. Se reutilizan los tokens `--encuadre-*`, Angular Material y la barra lateral existente.
+Inter se carga desde Google Fonts (link en `index.html`, no archivos locales — ⚠️ el README original decía que se servía localmente desde `public/fonts`, pero esa carpeta no existe en el proyecto). Los iconos son Material Icons (Angular Material). `public/figma` contiene exportaciones del diseño (imágenes y avatar), no capturas de pantallas usadas en lugar de componentes. Formularios, botones, tarjetas y navegación son elementos interactivos reales. Se reutilizan los tokens `--encuadre-*`, Angular Material y la barra lateral existente.
