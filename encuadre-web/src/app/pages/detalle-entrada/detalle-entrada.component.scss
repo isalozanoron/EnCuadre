@@ -103,7 +103,12 @@
     font-size: 17px;
     color: var(--encuadre-acento);
     margin: 0;
+    width: 320px;
   }
+}
+
+.btn--ancho-calificar {
+  width: 280px;
 }
 
 .tarjeta {

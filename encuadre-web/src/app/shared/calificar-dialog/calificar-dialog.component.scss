@@ -1,10 +1,12 @@
 .dialogo {
-  background-color: var(--encuadre-fondo);
+  background-color: var(--encuadre-superficie);
+  border: 1px solid var(--encuadre-texto-secundario);
+  border-radius: 12px;
   padding: 32px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  min-width: 456px;
+  gap: 24px;
+  min-width: 520px;
 
   &__titulo {
     font-family: 'Inter', sans-serif;
@@ -33,12 +35,14 @@
 
 .estrellas {
   display: flex;
+  justify-content: center;
   gap: 12px;
 
   &__boton {
     background: none;
     border: none;
-    font-size: 32px;
+    font-size: 30px;
+    font-weight: 700;
     color: var(--encuadre-acento);
     cursor: pointer;
     padding: 8px;

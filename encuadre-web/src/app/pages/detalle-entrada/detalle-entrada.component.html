@@ -16,7 +16,7 @@
       @if (calificacionGuardada()) {
         <div class="mensaje-info mensaje-info--exito">
           <p class="mensaje-info__titulo">Calificación guardada</p>
-          <p class="mensaje-info__texto">Interstellar · {{ calificacion() }} de 5</p>
+          <p class="mensaje-info__texto">Interstellar · {{ calificacion }} de 5</p>
         </div>
       }
 
@@ -28,8 +28,8 @@
           <p class="informacion__meta">Vista el 2 de septiembre de 2026 · Ciencia ficción, Drama</p>
 
           <div class="calificacion-fila">
-            <p class="calificacion-fila__estrellas">{{ estrellas() }}&nbsp;&nbsp;{{ calificacion() }} de 5</p>
-            <a mat-stroked-button class="btn-outline" (click)="abrirDialogoCalificar()">Cambiar calificación</a>
+            <p class="calificacion-fila__estrellas">{{ estrellas() }}&nbsp;&nbsp;{{ calificacion }} de 5</p>
+            <a mat-stroked-button class="btn-outline btn--ancho-calificar" (click)="abrirDialogoCalificar()">Cambiar calificación</a>
           </div>
 
           <div class="tarjeta">
