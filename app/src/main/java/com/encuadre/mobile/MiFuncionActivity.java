@@ -25,15 +25,16 @@ public class MiFuncionActivity extends BasePantallaActivity {
   @Override
   protected void onResume() {
     super.onResume();
-    boolean configurada = demo().contains("direccion_" + pelicula.id);
+    boolean configurada = demo().getBoolean("alarma_" + pelicula.id, false);
     findViewById(R.id.configurar_alarma).setVisibility(configurada ? View.GONE : View.VISIBLE);
     findViewById(R.id.alarma_activa).setVisibility(configurada ? View.VISIBLE : View.GONE);
     ((TextView) findViewById(R.id.hora_alarma)).setText(pelicula.salida);
     View sw = findViewById(R.id.alarma_switch);
     renderSwitch();
     sw.setOnClickListener(v -> {
-      demo().edit().putBoolean("alarma_" + pelicula.id, !demo().getBoolean("alarma_" + pelicula.id, false)).apply();
+      demo().edit().putBoolean("alarma_" + pelicula.id, false).apply();
       renderSwitch();
+      funcion(pelicula.id, AlarmaSalidaActivity.class);
     });
     androidx.constraintlayout.widget.ConstraintLayout.LayoutParams divider = (androidx.constraintlayout.widget.ConstraintLayout.LayoutParams) findViewById(R.id.divider_460).getLayoutParams();
     divider.topMargin = Math.round((configurada ? 460 : 439) * getResources().getDisplayMetrics().density);

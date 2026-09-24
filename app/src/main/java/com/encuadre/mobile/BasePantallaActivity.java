@@ -91,14 +91,14 @@ public class BasePantallaActivity extends androidx.appcompat.app.AppCompatActivi
   }
 
   protected void comprarWeb() {
-    new com.google.android.material.dialog.MaterialAlertDialogBuilder(
-            this, R.style.EnCuadreDialogTheme)
-            .setTitle("Continúa en la Web")
-            .setMessage(
-                    "La compra de boletas se realiza en la versión web de EnCuadre. Allí podrás comparar"
-                            + " precios y elegir tu función.")
-            .setNegativeButton("Cancelar", null)
-            .setPositiveButton("Entendido", (d, w) -> d.dismiss())
-            .show();
+    android.app.Dialog dialog = new android.app.Dialog(this);
+    dialog.requestWindowFeature(android.view.Window.FEATURE_NO_TITLE);
+    dialog.setContentView(R.layout.dialog_comprar_boletos);
+    dialog.findViewById(R.id.entendido).setOnClickListener(v -> dialog.dismiss());
+    dialog.show();
+    android.view.Window window = dialog.getWindow();
+    window.setBackgroundDrawableResource(android.R.color.transparent);
+    int ancho = Math.round(312 * getResources().getDisplayMetrics().density);
+    window.setLayout(ancho, android.view.ViewGroup.LayoutParams.WRAP_CONTENT);
   }
 }

@@ -35,8 +35,6 @@ public class ModoSilencioActivity extends BasePantallaActivity {
             | (activo ? android.view.Gravity.END : android.view.Gravity.START);
     thumb.setLayoutParams(lp);
     TextView estado = findViewById(R.id.silencio_estado);
-    estado.setText(activo ? "Modo silencio activado" : "Modo silencio desactivado");
-    estado.setBackgroundResource(R.drawable.figma_snackbar);
-    estado.setBackgroundTintList(android.content.res.ColorStateList.valueOf(getColor(activo ? R.color.encuadre_exito : R.color.encuadre_superficie)));
+    estado.setVisibility(activo ? View.VISIBLE : View.INVISIBLE);
   }
 }

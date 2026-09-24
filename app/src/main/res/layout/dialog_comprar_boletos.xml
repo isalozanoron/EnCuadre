@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_dialog_comprar"
+    android:paddingTop="24dp"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingBottom="20dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/comprar_boletos_titulo"
+        android:textSize="21sp"
+        android:fontFamily="@font/inter_semibold"
+        android:textColor="@color/encuadre_blanco"
+        android:includeFontPadding="false" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/comprar_boletos_descripcion"
+        android:textSize="14sp"
+        android:fontFamily="@font/inter_regular"
+        android:textColor="@color/encuadre_texto_secundario"
+        android:includeFontPadding="false"
+        android:breakStrategy="simple"
+        android:hyphenationFrequency="none" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/entendido"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="20dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="0dp"
+        android:paddingBottom="0dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:gravity="center"
+        android:text="@string/comprar_boletos_entendido"
+        android:textAllCaps="false"
+        android:singleLine="true"
+        android:fontFamily="@font/inter_regular"
+        android:textStyle="normal"
+        android:textSize="14sp"
+        android:letterSpacing="0"
+        android:textColor="@color/encuadre_acento"
+        android:includeFontPadding="false" />
+</LinearLayout>

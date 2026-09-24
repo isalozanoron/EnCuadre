@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="comprar_boletos_titulo">Comprar Boletos</string>
+    <string name="comprar_boletos_descripcion">Ingresa a encuadre.com desde tu computador para elegir tu función y completar la compra.</string>
+    <string name="comprar_boletos_entendido">Entendido</string>
     <string name="app_name">EnCuadre</string>
     <string name="cargando">Cargando…</string>
 
